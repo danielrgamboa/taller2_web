@@ -1,0 +1,40 @@
+.mainspecialinfopolaroid{
+    max-width: 960px;
+    margin: 0px auto;
+    display: flex;
+    padding: 0px 5px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media(max-width: $breakpoint-sm){
+      &{
+          flex-wrap: wrap;
+          justify-content: center;
+          flex-direction: row;
+          padding: 30px 10px;
+
+      }
+    }
+
+  }
+  .polaroid{
+    width: 50%;
+    background-color: $primary-color;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;
+
+    @media (max-width: $breakpoint-sm){
+      margin-top: 20px;
+    }
+    
+  }
+
+  .pola{
+    width: 100%;
+  }
+  
+  .polacontainer{
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+  }

@@ -1,0 +1,37 @@
+.mainspecs{
+    position: relative;
+
+
+}
+
+.mainspecs__img{
+    max-width: 960px;
+    margin: 0px auto;
+    display: flex;
+    padding: 0px 5px;
+    margin-bottom: 50px;
+ 
+    @media(max-width: 960px){
+      &{
+          flex-direction: row;
+          max-width: 100%;
+          height: auto;
+      }
+    }
+  }
+
+  .mainspecs__list{
+      position: absolute;
+      color: white;
+      left: 50%;
+      top: 50px;
+
+      @media(max-width: $breakpoint-sm){
+        &{
+            color: white;
+            font-size: 13px;
+            left: 34%;
+            top: -5%;
+        }
+      }
+  }

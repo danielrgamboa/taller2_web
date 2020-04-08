@@ -1,0 +1,14 @@
+.mainbanner__1{
+    max-width: 960px;
+    margin: 0px auto;
+    display: flex;
+    padding: 0px 5px;
+ 
+    @media(max-width: 960px){
+      &{
+          flex-direction: row;
+          max-width: 100%;
+          height: auto;
+      }
+    }
+  }

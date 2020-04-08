@@ -1,0 +1,23 @@
+
+.mainheader{
+    background-color: $secondary-color;
+    padding: 10px 0px;
+}
+.mainheader__container{
+    align-items: center;
+
+    @media (max-width: $breakpoint-sm) {
+        display: flex;
+        flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        }
+
+}
+.mainheader__logo{
+    width: 100px;
+
+    @media (max-width: $breakpoint-sm){
+        margin-bottom: 20px;
+    }
+}
