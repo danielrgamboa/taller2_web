@@ -6,7 +6,7 @@ const express = require ('express');
 //Instanciar servidor express
 const app = express();
 
-//Hacer publica la carpeta Public para que se muestren los styles.
+//Hacer estática la carpeta Public para que se muestren los styles.
 app.use(express.static('public'));
 
 //Abrir la homepage de la página.
