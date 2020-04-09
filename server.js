@@ -30,22 +30,40 @@ app.get('/shop', function(req, res){
     console.log('hola en shop');
     //response con texto normal
     //res.send('pagina de shop');
+
+    //objeto contexto
+    var context = {
+        title: 'El titulo cambiado',
+    }
     //response con un handlebar-debe ser renderizado para que siempre se actualice.
-    res.render('store');
-});
+    res.render('store', context);
+}); 
 
 //Abrir la página del detalle del producto de la página.
-app.get('/product', function(req, res){
+app.get('/product/:name', function(req, res){
     console.log('hola en product');
+
+    //objeto contexto 
+    var context ={
+
+    }
+
+    console.log(req.params.name);
+
     //res.send('pagina de checkout');
-    res.render('product');
+    res.render('product', context);
 });
 
 //Abrir la página de checkout de la página.
 app.get('/checkout', function(req, res){
     console.log('hola en checkout');
     //res.send('pagina de checkout');
-    res.render('checkout');
+
+    //objeto contexto 
+    var context ={
+
+    }
+    res.render('checkout', context);
 });
 
 //El puerto en donde aparece la página.
