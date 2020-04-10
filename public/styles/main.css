@@ -996,11 +996,20 @@ body, html {
 }
 
 .product__description {
-  color: lightseagreen;
+  color: green;
+  background-color: orchid;
   font-size: 30px;
 }
 
 .product__section {
   background-color: lightsteelblue;
+}
+
+.product {
+  background-color: lightcoral;
+}
+
+.product--with-options {
+  background-color: khaki;
 }
 /*# sourceMappingURL=main.css.map */

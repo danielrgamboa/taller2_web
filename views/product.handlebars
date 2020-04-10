@@ -1,4 +1,7 @@
- <div class="product">
+ <!--notas de clase para adjuntar luego --> 
+ <div class="product {{#if options}}product--with-options{{/if}}">
+
+ 
  <header class="product__header">
      <h2 class="product__title">{{ title }}</h2> 
  </header>
@@ -8,6 +11,30 @@
      <p class="product__description">{{ description }}</p>
  </section>
 
+ {{# if options}}
+ <h3>Tiene opciones disponibles</h3>
+ {{#each options}}
+ <p>{{ this }}</p>
+ {{/each}}
+ {{else}}
+ <h3>No tiene opciones disponibles</h3>
+ {{/if}}
+
+ {{#if variations}}
+ <h3>Tiene variaciones</h3>
+ <ol>
+     {{#each variations}}
+     <li>{{ name }} <strong>{{ price }}</strong></li>
+     {{/each}}
+ </ol>
+ {{/if}}
+
+
+
+ {{#if freeShipping}}
+ <h3>Envio gratis</h3>
+ {{/if}}
+
  </div>
- 
+   
  

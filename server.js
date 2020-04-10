@@ -51,6 +51,22 @@ app.get('/product/:name', function(req, res){
             title: 'Peluca arcoiris',
             img: '/img/wig1.jpg',
             description: 'Una peluca unicornio',
+            options: ['larga', 'corta', 'ondulada'],
+            variations: [
+                {
+                    name: 'Simple',
+                },
+                {
+                    name: 'Con glitter',
+                    price: 200,
+                },
+                {
+                    name: 'Buzzcut',
+                    price: 300,
+                }
+            ],
+            price: 125,
+            freeShipping: true,
         }
     }
 
@@ -59,6 +75,9 @@ app.get('/product/:name', function(req, res){
             title: 'Peluca diva',
             img: '/img/wig2.jpg',
             description: 'Una peluca dorada',
+            options: [],
+            price: 50,
+            freeShipping: false, 
         }
     }
 

@@ -1,10 +1,19 @@
 .product__description{
-    color: lightseagreen;
+    color: green;
+    background-color: orchid;
     font-size: 30px;
 }
 
 .product__section{
     background-color: lightsteelblue;
 }
+
+.product{
+    background-color: lightcoral;
+    &--with-options{
+        background-color: khaki;
+        }
+}
+
 
 
