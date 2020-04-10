@@ -1005,11 +1005,21 @@ body, html {
   background-color: lightsteelblue;
 }
 
-.product {
-  background-color: lightcoral;
-}
-
 .product--with-options {
   background-color: khaki;
+}
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thumb {
+  border: 1px solid maroon;
+}
+
+.thumb__img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

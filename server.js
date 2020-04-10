@@ -4,6 +4,19 @@ const path =require('path');
 //Importar express-handlebars
 const exphbs = require('express-handlebars');
 
+//Importar modulo de products (20 prods)
+const products = require('./products');
+console.log(products);
+
+//Recorrer productos para agregar freeShipping
+products.forEach(function(elem){
+    if(elem.price >= 100){
+        elem.freeShipping= true;
+    }else {
+        elem.freeShipping= false;
+    }
+})
+
 //Importar la libreria express
 const express = require ('express');
 //Instanciar servidor express
@@ -34,54 +47,35 @@ app.get('/shop', function(req, res){
     //objeto contexto
     var context = {
         title: 'El titulo cambiado',
+        products: products,
     }
     //response con un handlebar-debe ser renderizado para que siempre se actualice.
     res.render('store', context);
 }); 
 
 //Abrir la página del detalle del producto de la página.
-app.get('/product/:name', function(req, res){
+app.get('/product/:name/:id', function(req, res){
     console.log('hola en product');
 
     //objeto contexto 
     var context ={};
 
-    if(req.params.name === 'arcoiris'){
-        context ={
-            title: 'Peluca arcoiris',
-            img: '/img/wig1.jpg',
-            description: 'Una peluca unicornio',
-            options: ['larga', 'corta', 'ondulada'],
-            variations: [
-                {
-                    name: 'Simple',
-                },
-                {
-                    name: 'Con glitter',
-                    price: 200,
-                },
-                {
-                    name: 'Buzzcut',
-                    price: 300,
-                }
-            ],
-            price: 125,
-            freeShipping: true,
+    //buscar en la base de datos el elemento correspondiente
+    var foundElement = products.find(function (elem){
+        if(elem.id == req.params.id){
+            return true;
         }
+    });
+    //pasar las variables de ese elemento al contexto 
+    context = foundElement;
+    
+    /*if(req.params.name === 'arcoiris'){
+        context ={};
     }
 
     if(req.params.name === 'diva'){
-        context ={
-            title: 'Peluca diva',
-            img: '/img/wig2.jpg',
-            description: 'Una peluca dorada',
-            options: [],
-            price: 50,
-            freeShipping: false, 
-        }
-    }
-
-
+        context = {}; 
+    }*/
 
     console.log(req.params.name);
 

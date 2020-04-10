@@ -1,3 +1,24 @@
 <h1>Store</h1>
 <h3 class= "title">{{ title }}</h3>
-<p>holis</p>  
+<p>holis</p>
+
+<aside>
+    <h2>Filters</h2>
+</aside>
+
+<nav></nav>
+
+    <h2>Lista de productos</h2>
+<main class="productList">
+
+    {{#each products}}
+    <div class="thumb">
+        <h4 class="thumb__title">{{ title }}</h4>
+        <img class="thumb__img" src="{{ img }}" alt="">
+        <p class="thumb__price">{{ price}}</p>
+        <!--Dar click en el boton del store para pasar al product-->
+        <a class="thumb__button" href="/product/{{title}}/{{ id }}">Ver más</a>
+    
+    </div>
+    {{/each}}
+</main> 
