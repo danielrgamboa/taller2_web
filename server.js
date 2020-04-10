@@ -44,9 +44,25 @@ app.get('/product/:name', function(req, res){
     console.log('hola en product');
 
     //objeto contexto 
-    var context ={
+    var context ={};
 
+    if(req.params.name === 'arcoiris'){
+        context ={
+            title: 'Peluca arcoiris',
+            img: '/img/wig1.jpg',
+            description: 'Una peluca unicornio',
+        }
     }
+
+    if(req.params.name === 'diva'){
+        context ={
+            title: 'Peluca diva',
+            img: '/img/wig2.jpg',
+            description: 'Una peluca dorada',
+        }
+    }
+
+
 
     console.log(req.params.name);
 
@@ -60,9 +76,7 @@ app.get('/checkout', function(req, res){
     //res.send('pagina de checkout');
 
     //objeto contexto 
-    var context ={
-
-    }
+    var context ={};
     res.render('checkout', context);
 });
 

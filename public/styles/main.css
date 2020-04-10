@@ -994,4 +994,13 @@ body, html {
     top: -85px;
   }
 }
+
+.product__description {
+  color: lightseagreen;
+  font-size: 30px;
+}
+
+.product__section {
+  background-color: lightsteelblue;
+}
 /*# sourceMappingURL=main.css.map */
