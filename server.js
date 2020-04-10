@@ -8,14 +8,23 @@ const exphbs = require('express-handlebars');
 const products = require('./products');
 console.log(products);
 
-//Recorrer productos para agregar freeShipping
+//Recorrer productos para agregar freeShipping (>$100)
 products.forEach(function(elem){
     if(elem.price >= 100){
         elem.freeShipping= true;
     }else {
         elem.freeShipping= false;
     }
-})
+});
+
+//Recorrer productos para agregar kardashianAproved (>$100)
+products.forEach(function(elem){
+    if(elem.price >= 100){
+        elem.kardashianAproved= true;
+    }else {
+        elem.kardashianAproved= false;
+    }
+});
 
 //Importar la libreria express
 const express = require ('express');
@@ -46,7 +55,6 @@ app.get('/shop', function(req, res){
 
     //objeto contexto
     var context = {
-        title: 'El titulo cambiado',
         products: products,
     }
     //response con un handlebar-debe ser renderizado para que siempre se actualice.
@@ -60,13 +68,13 @@ app.get('/product/:name/:id', function(req, res){
     //objeto contexto 
     var context ={};
 
-    //buscar en la base de datos el elemento correspondiente
+    //Buscar en la base de datos el elemento correspondiente
     var foundElement = products.find(function (elem){
         if(elem.id == req.params.id){
             return true;
         }
     });
-    //pasar las variables de ese elemento al contexto 
+    //Pasar las variables de ese elemento al contexto 
     context = foundElement;
     
     /*if(req.params.name === 'arcoiris'){

@@ -1,7 +1,7 @@
  <!--notas de clase para adjuntar luego --> 
  <div class="product {{#if options}}product--with-options{{/if}}">
 
- 
+
  <header class="product__header">
      <h2 class="product__title">{{ title }}</h2> 
  </header>
@@ -11,17 +11,20 @@
      <p class="product__description">{{ description }}</p>
  </section>
 
+
+ <!--cuando el producto tiene opciones disponibles (larga, corta, lisa, rizada) --> 
  {{# if options}}
- <h3>Tiene opciones disponibles</h3>
+ <h3>This wig has these customable styles</h3>
  {{#each options}}
  <p>{{ this }}</p>
  {{/each}}
  {{else}}
- <h3>No tiene opciones disponibles</h3>
+ <h3>This wig has a unique style</h3>
  {{/if}}
 
+ <!--cuando al producto se le puede hacer cambios personalizados--> 
  {{#if variations}}
- <h3>Tiene variaciones</h3>
+ <h3>You can customize the wig</h3>
  <ol>
      {{#each variations}}
      <li>{{ name }} <strong>{{ price }}</strong></li>
@@ -30,9 +33,14 @@
  {{/if}}
 
 
-
+ <!--cuando la peluca tiene freeShipping (>$100) --> 
  {{#if freeShipping}}
- <h3>Envio gratis</h3>
+ <h3>This wig has Free Shipping Worldwide</h3>
+ {{/if}}
+
+<!--cuando la peluca es Kardashian Kollection (>$100) --> 
+ {{#if kardashianAproved}}
+ <h3>This wig is Kardashian Kollection Aproved</h3>
  {{/if}}
 
  </div>
