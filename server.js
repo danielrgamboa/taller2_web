@@ -26,6 +26,15 @@ products.forEach(function(elem){
     }
 });
 
+//Recorrer productos para agregar topSeller (>3.5)
+products.forEach(function(elem){
+    if(elem.rating >= 4.3){
+        elem.topSeller= true;
+    }else {
+        elem.topSeller= false;
+    }
+});
+
 //Importar la libreria express
 const express = require ('express');
 //Instanciar servidor express
@@ -50,12 +59,39 @@ app.get('/', function (req, res) {
 //Abrir la shop de la página.
 app.get('/shop', function(req, res){
     console.log('hola en shop');
+    console.log(req.query);
     //response con texto normal
     //res.send('pagina de shop');
 
+        // variable filtrada
+        var filtered = products;
+
+        //Buscar productos filtrados por precio 
+        if(req.query.price_lt){
+            //crear copia del arreglo filtrado 
+            filtered = products.filter(function (elem){
+                // precio menor al que el usuario preguntó
+                if(elem.price < req.query.price_lt){
+                    return true;
+                }
+            });
+        }
+
+        //Buscar productos con una palabra que pertenezca al nombre
+        if(req.query.search){
+        filtered = products.filter(function (elem) {
+           // si el nombre del producto incluye lo que el usuario buscó
+           if(elem.name.includes(req.query.search)){
+           return true;
+                }
+           });
+        }
+        
+
     //objeto contexto
     var context = {
-        products: products,
+        //products: products,
+          products: filtered,
     }
     //response con un handlebar-debe ser renderizado para que siempre se actualice.
     res.render('store', context);
@@ -100,6 +136,8 @@ app.get('/checkout', function(req, res){
     var context ={};
     res.render('checkout', context);
 });
+
+
 
 //El puerto en donde aparece la página.
 app.listen (3000, function (){

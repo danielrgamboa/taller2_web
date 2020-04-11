@@ -996,9 +996,8 @@ body, html {
 }
 
 .product__description {
-  color: goldenrod;
   background-color: orchid;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .product__section {
@@ -1013,13 +1012,10 @@ body, html {
   background-color: hotpink;
 }
 
-.shop__body {
+.shop {
   background-color: yellow;
   max-width: 960px;
   margin: 0px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0px 5px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1031,7 +1027,7 @@ body, html {
 }
 
 @media (max-width: 414px) {
-  .shop__body {
+  .shop {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
@@ -1049,11 +1045,15 @@ body, html {
   background-color: lightblue;
 }
 
+.shop__body {
+  background-color: indianred;
+}
+
 .productList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: khaki;
+  background-color: greenyellow;
 }
 
 .thumb {
@@ -1080,6 +1080,11 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.thumb__info {
+  display: inline;
+  background-color: lightgreen;
 }
 
 .thumb__button {
