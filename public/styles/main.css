@@ -996,7 +996,7 @@ body, html {
 }
 
 .product__description {
-  color: green;
+  color: goldenrod;
   background-color: orchid;
   font-size: 30px;
 }
@@ -1007,5 +1007,103 @@ body, html {
 
 .product--with-options {
   background-color: khaki;
+}
+
+.holis {
+  background-color: hotpink;
+}
+
+.shop__body {
+  background-color: yellow;
+  max-width: 960px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 5px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 414px) {
+  .shop__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 30px 10px;
+  }
+}
+
+.shop__header {
+  background-color: lightblue;
+}
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: khaki;
+}
+
+.thumb {
+  width: 50%;
+  background-color: #c634b8;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 5px;
+}
+
+@media (max-width: 414px) {
+  .thumb {
+    margin-top: 20px;
+  }
+}
+
+.thumb__img {
+  width: 100%;
+}
+
+.thumb__price {
+  text-align: center;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thumb__button {
+  display: inline-block;
+  background-color: #34495E;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media (max-width: 414px) {
+  .thumb__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #ffb031;
+  }
+}
+
+.thumb__button:hover {
+  background-color: goldenrod;
 }
 /*# sourceMappingURL=main.css.map */
