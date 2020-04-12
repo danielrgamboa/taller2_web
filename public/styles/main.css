@@ -1016,6 +1016,11 @@ body, html {
   background-color: yellow;
   max-width: 960px;
   margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0px 5px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1053,15 +1058,21 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: greenyellow;
 }
 
 .thumb {
-  width: 50%;
+  width: 30%;
+  padding: 0px 10px 0px 10px;
   background-color: #c634b8;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 5px;
+  margin: 10px;
 }
 
 @media (max-width: 414px) {
@@ -1076,15 +1087,30 @@ body, html {
 
 .thumb__price {
   text-align: center;
-  padding: 10px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .thumb__info {
-  display: inline;
-  background-color: lightgreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: lightseagreen;
+  padding: 0px 10px 0px 10px;
+}
+
+.thumb__link {
+  background-color: mediumblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .thumb__button {

@@ -6,7 +6,8 @@
     background-color: yellow;
     max-width: 960px;
     margin: 0px auto;
-    //display: flex;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0px 5px;
     flex-direction: row;
     justify-content: space-between;
@@ -31,14 +32,17 @@
 
 .productList{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: greenyellow;
 }
 
 .thumb{
-    width: 50%;
+    width: 30%;
+    padding: 0px 10px 0px 10px;
     background-color: $primary-color;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 5px;
+    margin: 10px;
 
     @media (max-width: $breakpoint-sm){
       margin-top: 20px;
@@ -48,12 +52,18 @@
     }
     &__price{
     text-align: center;
-    padding: 10px 20px;
     display: flex;
     }
     &__info{
-        display: inline;
-        background-color: lightgreen;
+        display: flex;
+        justify-content: space-between;
+        background-color: lightseagreen;
+        padding: 0px 10px 0px 10px;
+    }
+    &__link{
+        background-color: mediumblue;
+        display: flex;
+        justify-content: center;
     }
     &__button{
         display: inline-block;

@@ -1,5 +1,5 @@
 //Importar path para hacer la página absoluta
-const path =require('path');
+const path = require('path');
 
 //Importar express-handlebars
 const exphbs = require('express-handlebars');
@@ -9,34 +9,34 @@ const products = require('./products');
 console.log(products);
 
 //Recorrer productos para agregar freeShipping (>$100)
-products.forEach(function(elem){
-    if(elem.price >= 100){
-        elem.freeShipping= true;
-    }else {
-        elem.freeShipping= false;
+products.forEach(function (elem) {
+    if (elem.price >= 100) {
+        elem.freeShipping = true;
+    } else {
+        elem.freeShipping = false;
     }
 });
 
 //Recorrer productos para agregar kardashianAproved (>$100)
-products.forEach(function(elem){
-    if(elem.price >= 100){
-        elem.kardashianAproved= true;
-    }else {
-        elem.kardashianAproved= false;
+products.forEach(function (elem) {
+    if (elem.price >= 100) {
+        elem.kardashianAproved = true;
+    } else {
+        elem.kardashianAproved = false;
     }
 });
 
 //Recorrer productos para agregar topSeller (>3.5)
-products.forEach(function(elem){
-    if(elem.rating >= 4.3){
-        elem.topSeller= true;
-    }else {
-        elem.topSeller= false;
+products.forEach(function (elem) {
+    if (elem.rating >= 4.3) {
+        elem.topSeller = true;
+    } else {
+        elem.topSeller = false;
     }
 });
 
 //Importar la libreria express
-const express = require ('express');
+const express = require('express');
 //Instanciar servidor express
 const app = express();
 
@@ -57,62 +57,73 @@ app.get('/', function (req, res) {
 });
 
 //Abrir la shop de la página.
-app.get('/shop', function(req, res){
+app.get('/shop', function (req, res) {
     console.log('hola en shop');
     console.log(req.query);
     //response con texto normal
     //res.send('pagina de shop');
 
-        // variable filtrada
-        var filtered = products;
+    // variable filtrada
+    var filtered = products;
 
-        //Buscar productos filtrados por precio 
-        if(req.query.price_lt){
-            //crear copia del arreglo filtrado 
-            filtered = products.filter(function (elem){
-                // precio menor al que el usuario preguntó
-                if(elem.price < req.query.price_lt){
-                    return true;
-                }
-            });
-        }
-
-        //Buscar productos con una palabra que pertenezca al nombre
-        if(req.query.search){
+    //Buscar productos filtrados por precio 
+    if (req.query.price_lt) {
+        //crear copia del arreglo filtrado 
         filtered = products.filter(function (elem) {
-           // si el nombre del producto incluye lo que el usuario buscó
-           if(elem.name.includes(req.query.search)){
-           return true;
-                }
-           });
-        }
-        
+            // precio menor al que el usuario preguntó
+            if (elem.price < req.query.price_lt) {
+                return true;
+            }
+        });
+    }
+
+    //Buscar productos filtrados por palabra clave
+    if (req.query.search) {
+        filtered = products.filter(function (elem) {
+            // si el nombre del producto incluye lo que el usuario buscó
+            if (elem.title.includes(req.query.search)) {
+                return true;
+            }
+        });
+    }
+
+    //Buscar productos filtrados por estilo
+    if (req.query.search) {
+        filtered = products.filter(function (elem) {
+            // si el nombre del producto incluye lo que el usuario buscó
+            if (elem.style.includes(req.query.search)) {
+                return true;
+            }
+        });
+    }
+
+
 
     //objeto contexto
     var context = {
         //products: products,
-          products: filtered,
+        products: filtered,
     }
     //response con un handlebar-debe ser renderizado para que siempre se actualice.
     res.render('store', context);
-}); 
+});
 
 //Abrir la página del detalle del producto de la página.
-app.get('/product/:name/:id', function(req, res){
+app.get('/product/:name/:id', function (req, res) {
     console.log('hola en product');
 
     //objeto contexto 
-    var context ={};
+    var context = {};
 
     //Buscar en la base de datos el elemento correspondiente
-    var foundElement = products.find(function (elem){
-        if(elem.id == req.params.id){
+    var foundElement = products.find(function (elem) {
+        if (elem.id == req.params.id) {
             return true;
         }
     });
     //Pasar las variables de ese elemento al contexto 
     context = foundElement;
-    
+
     /*if(req.params.name === 'arcoiris'){
         context ={};
     }
@@ -128,18 +139,18 @@ app.get('/product/:name/:id', function(req, res){
 });
 
 //Abrir la página de checkout de la página.
-app.get('/checkout', function(req, res){
+app.get('/checkout', function (req, res) {
     console.log('hola en checkout');
     //res.send('pagina de checkout');
 
     //objeto contexto 
-    var context ={};
+    var context = {};
     res.render('checkout', context);
 });
 
 
 
 //El puerto en donde aparece la página.
-app.listen (3000, function (){
+app.listen(3000, function () {
     console.log('servidor iniciado en puerto 3000');
 });

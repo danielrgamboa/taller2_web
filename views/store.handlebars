@@ -13,24 +13,27 @@
 
     <h2>Lista de productos (20 prods)</h2> 
 
+<p>DDWigs has the following products</p>
     </article>
 
 <!--Articulo del body de la tienda-->
-<p>DDWigs has the following products</p>
 <article class="shop__body">
 <main class="productList">
 
     {{#each products}}
     <div class="thumb">
-        <h4 class="thumb__title">{{ title }}</h4>
         <img class="thumb__img" src="{{ img }}" alt="">
-        <div class="thumb__info">
+        <h4 class="thumb__title">{{ title }}</h4>
         <p class="thumb__minidescription">{{ minidescription }}</p>
-        <p class="thumb__price"> $ {{ price }}</p>
-        <p class="thumb__rating">{{ rating }}</p>
+        <div class="thumb__info">
+        <p class="thumb__price">Price: {{ price }}</p>
+        <p class="thumb__rating">Rating: {{ rating }}</p>
         </div>
+
+        <div class="thumb__link">
         <!--Dar click en el boton del store para pasar al product-->
         <a class="thumb__button" href="/product/{{title}}/{{ id }}">Ver más</a>
+        </div>
     </div>
     {{/each}}
 </main>
