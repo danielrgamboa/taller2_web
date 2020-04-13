@@ -26,12 +26,11 @@
         <h4 class="thumb__title">{{ title }}</h4>
         <p class="thumb__minidescription">{{ minidescription }}</p>
         <div class="thumb__info">
-        <p class="thumb__price">Price: {{ price }}</p>
-        <p class="thumb__rating">Rating: {{ rating }}</p>
+        <p class="thumb__price">Price: $ {{ price }}</p>
+        <p class="thumb__rating">Rating: {{ rating }}</p><span class="thumb__star"><i class="fas fa-star"></i></span>
         </div>
-
         <div class="thumb__link">
-        <!--Dar click en el boton del store para pasar al product-->
+        <!--Dar click en el boton del store para pasar al product individual-->
         <a class="thumb__button" href="/product/{{title}}/{{ id }}">Ver más</a>
         </div>
     </div>

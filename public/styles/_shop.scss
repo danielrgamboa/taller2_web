@@ -12,15 +12,6 @@
     flex-direction: row;
     justify-content: space-between;
 
-    @media(max-width: $breakpoint-sm){
-      &{
-          flex-wrap: wrap;
-          justify-content: center;
-          flex-direction: row;
-          padding: 30px 10px;
-
-      }
-    }
 }
 .shop__header{
     background-color: lightblue;
@@ -35,17 +26,28 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: greenyellow;
+    @media(max-width: $breakpoint-sm){
+        &{
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 10px;
+  
+        }
+      }
 }
 
 .thumb{
     width: 30%;
-    padding: 0px 10px 0px 10px;
     background-color: $primary-color;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px;
 
     @media (max-width: $breakpoint-sm){
       margin-top: 20px;
+      width: 100%;
+      margin: 0px;
+      margin-bottom: 20px;
     }
     &__img{
         width: 100%;
@@ -53,6 +55,13 @@
     &__price{
     text-align: center;
     display: flex;
+    }
+    &__title{
+        padding: 0px 10px 0px 10px;
+    }
+    &__minidescription{
+        background-color: yellow;
+        padding: 0px 10px 0px 10px;
     }
     &__info{
         display: flex;
@@ -64,6 +73,13 @@
         background-color: mediumblue;
         display: flex;
         justify-content: center;
+    }
+    &__star{
+        background-color: pink;
+        color: white;
+        display: flex;
+        margin-top: 21px;
+        margin-left: -13px;
     }
     &__button{
         display: inline-block;

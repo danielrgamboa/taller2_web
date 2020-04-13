@@ -1031,21 +1031,6 @@ body, html {
           justify-content: space-between;
 }
 
-@media (max-width: 414px) {
-  .shop {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 30px 10px;
-  }
-}
-
 .shop__header {
   background-color: lightblue;
 }
@@ -1066,9 +1051,23 @@ body, html {
   background-color: greenyellow;
 }
 
+@media (max-width: 414px) {
+  .productList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 10px;
+  }
+}
+
 .thumb {
   width: 30%;
-  padding: 0px 10px 0px 10px;
   background-color: #c634b8;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1078,6 +1077,9 @@ body, html {
 @media (max-width: 414px) {
   .thumb {
     margin-top: 20px;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1090,6 +1092,15 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.thumb__title {
+  padding: 0px 10px 0px 10px;
+}
+
+.thumb__minidescription {
+  background-color: yellow;
+  padding: 0px 10px 0px 10px;
 }
 
 .thumb__info {
@@ -1111,6 +1122,16 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.thumb__star {
+  background-color: pink;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 21px;
+  margin-left: -13px;
 }
 
 .thumb__button {

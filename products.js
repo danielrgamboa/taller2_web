@@ -27,7 +27,7 @@ const products =[
                 name: 'Simple',
             },
             {
-                name: 'With a glittery root',
+                name: 'With a glittery root: $',
                 price: 200,
             },
             {
@@ -37,7 +37,7 @@ const products =[
         ],
         price: 125,
         rating: 4.5,
-        style: 'Loose Curls',
+        style: 'Blair',
     },{
         id: 2,
         title: 'Blair- Phoenix',
@@ -67,7 +67,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 100,
         rating: 4.2,
-        style: 'Loose Curls',
+        style: 'Blair',
          
     },{
         id: 3,
@@ -98,7 +98,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 100,
         rating: 4.0,
-        style: 'Loose Curls',
+        style: 'Blair',
     },{
         id: 4,
         title: 'Blair- Sour Grape',
@@ -128,7 +128,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 150,
         rating: 3.4,
-        style: 'Loose Curls',
+        style: 'Blair',
     },{
         id: 5,
         title: 'Kameron- Sour Peach',
@@ -158,7 +158,7 @@ const products =[
         options: [],
         price: 90,
         rating: 2.9,
-        style: 'Loose Waves',
+        style: 'Kameron',
     },{
         id: 6,
         title: 'Kameron- Iced Teal',
@@ -201,12 +201,12 @@ const products =[
         ],
         price: 125,
         rating: 4.7,
-        style: 'Loose Waves',
+        style: 'Kameron',
     },{
         id: 7,
         title: 'Kameron- Moss Green',
         img: '/img/prods/prod7.JPG',
-        minidescription: ' A Moss Green Blend ',
+        minidescription: ' A Moss Green Blend with Dark Tips ',
         description: `The colour is - A Moss Green Blend 
 
         The style is- Loose Waves
@@ -231,7 +231,7 @@ const products =[
         options: [],
         price: 90,
         rating: 4.0,
-        style: 'Loose Waves',
+        style: 'Kameron',
     },{
         id: 8,
         title: 'Kameron- Burnt Pumpkin',
@@ -261,12 +261,12 @@ const products =[
         options: [],
         price: 90,
         rating: 3.5,
-        style: 'Loose Waves',
+        style: 'Kameron',
     },{
         id: 9,
         title: 'Florence- Cherry Swirl',
         img: '/img/prods/prod9.JPG',
-        minidescription: 'A Rooted Pink & Red Blend ',
+        minidescription: 'A Rooted Pink, Brown  & Red Blend ',
         description: `The colour is-  A Rooted Pink & Red Blend 
 
         The style is a Loose Wave Style 
@@ -291,7 +291,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 75,
         rating: 2.5,
-        style: 'Loose Waves',
+        style: 'Florence',
     },{
         id: 10,
         title: 'Florence- Auburn Blend',
@@ -325,7 +325,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 100,
         rating: 5,
-        style: 'Loose Waves',
+        style: 'Florence',
     },{
         id: 11,
         title: 'Florence- Berry Blast',
@@ -355,7 +355,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 150,
         rating: 3.0,
-        style: 'Loose Waves',
+        style: 'Florence',
     },{
         id: 12,
         title: 'Florence- Frosted Peach',
@@ -387,7 +387,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 80,
         rating: 4.2,
-        style: 'Loose Waves',
+        style: 'Florence',
     },{
         id: 13,
         title: 'Isla- Candy Crush',
@@ -430,7 +430,7 @@ const products =[
         ],
         price: 125,
         rating: 5,
-        style: 'Bouncy Curls',
+        style: 'Isla',
     },{
         id: 14,
         title: 'Isla- Jewel Blue',
@@ -460,7 +460,7 @@ const products =[
         options: [],
         price: 180,
         rating: 4.7,
-        style: 'Bouncy Curls',
+        style: 'Isla',
     },{
         id: 15,
         title: 'Isla- Frosted Baby Pink',
@@ -481,7 +481,7 @@ const products =[
         options: [],
         price: 180,
         rating: 3.5,
-        style: 'Bouncy Curls',
+        style: 'Isla',
     },{
         id: 16,
         title: 'Isla- Lavender Ice',
@@ -511,7 +511,7 @@ const products =[
         options: [],
         price: 180,
         rating: 3.4,
-        style: 'Bouncy Curls',
+        style: 'Isla',
     },{
         id: 17,
         title: 'Elle- Galaxy',
@@ -541,7 +541,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 75,
         rating: 5,
-        style: 'Loose Waves',
+        style: 'Elle',
     },{
         id: 18,
         title: 'Elle- Raspberry Swirl',
@@ -584,7 +584,7 @@ const products =[
         ],
         price: 185,
         rating: 4.8,
-        style: 'Loose Waves',
+        style: 'Elle',
     },{
         id: 19,
         title: 'Elle- Pastel Dream',
@@ -614,7 +614,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 90,
         rating: 5,
-        style: 'Loose Waves',
+        style: 'Elle',
     },{
         id: 20,
         title: 'Elle- Prism',
@@ -644,7 +644,7 @@ const products =[
         options: ['long', 'short', 'wavy'],
         price: 90,
         rating: 4.5,
-        style: 'Loose Waves',
+        style: 'Elle',
     }
 
 
