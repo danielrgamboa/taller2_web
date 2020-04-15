@@ -1008,6 +1008,16 @@ body, html {
   background-color: khaki;
 }
 
+.product__return {
+  background-color: honeydew;
+  margin-top: 10px;
+}
+
+.product__returnarrow {
+  margin-right: 10px;
+  color: #34495E;
+}
+
 .holis {
   background-color: hotpink;
 }

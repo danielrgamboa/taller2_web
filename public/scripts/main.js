@@ -40,3 +40,5 @@ thumbs.forEach(iterateThumbs);
 handleImageClick(thumbs[0]);
 
 
+
+

@@ -2,41 +2,60 @@
 <section class="shop">
     <!--Articulo del header de la tienda-->
     <article class="shop__header">
-<h1>Store</h1>
-<h3 class= "title">{{ title }}</h3>
-<p class="holis">HELLOOOOW</p>
-
-<aside>
-    <h2>Filters</h2>
-</aside>
+        <h1>Store</h1>
+        <p class="holis">HELLOOOOW</p>
 
 
-    <h2>Lista de productos (20 prods)</h2> 
+        <h2>Filters</h2>
+        <nav>
+            Filtro por precio
+            <select>
+                <option value="" disabled="true" selected="true">Choose an option...</option>
+                <option value="100">Less than $100</option>
+                <option value="200">Less than $200</option>
+            </select>
+        </nav>
 
-<p>DDWigs has the following products</p>
+        <nav>
+            Filtro por estilo
+            <select>
+                <option value="" disabled="true" selected="true">Choose an option...</option>
+                <option value="Blair">Blair</option>
+                <option value="Kameron">Kameron</option>
+                <option value="Florence">Florence</option>
+                <option value="Isla">Isla</option>
+                <option value="Elle">Elle</option>
+            </select>
+        </nav>
+
+
+        <h2>Lista de productos (20 prods)</h2>
+
+        <p>DDWigs has the following products</p>
     </article>
 
-<!--Articulo del body de la tienda-->
-<article class="shop__body">
-<main class="productList">
+    <!--Articulo del body de la tienda-->
+    <article class="shop__body">
+        <main class="productList">
 
-    {{#each products}}
-    <div class="thumb">
-        <img class="thumb__img" src="{{ img }}" alt="">
-        <h4 class="thumb__title">{{ title }}</h4>
-        <p class="thumb__minidescription">{{ minidescription }}</p>
-        <div class="thumb__info">
-        <p class="thumb__price">Price: $ {{ price }}</p>
-        <p class="thumb__rating">Rating: {{ rating }}</p><span class="thumb__star"><i class="fas fa-star"></i></span>
-        </div>
-        <div class="thumb__link">
-        <!--Dar click en el boton del store para pasar al product individual-->
-        <a class="thumb__button" href="/product/{{title}}/{{ id }}">Ver más</a>
-        </div>
-    </div>
-    {{/each}}
-</main>
+            {{#each products}}
+            <div class="thumb">
+                <img class="thumb__img" src="{{ img }}" alt="">
+                <h4 class="thumb__title">{{ title }}</h4>
+                <p class="thumb__minidescription">{{ minidescription }}</p>
+                <div class="thumb__info">
+                    <p class="thumb__price">Price: $ {{ price }}</p>
+                    <p class="thumb__rating">Rating: {{ rating }}</p><span class="thumb__star"><i
+                            class="fas fa-star"></i></span>
+                </div>
+                <div class="thumb__link">
+                    <!--Dar click en el boton del store para pasar al product individual-->
+                    <a class="thumb__button" href="/product/{{title}}/{{ id }}">Ver más</a>
+                </div>
+            </div>
+            {{/each}}
+        </main>
 
     </article>
-
+    <script src="/scripts/client.js"></script>
 </section>

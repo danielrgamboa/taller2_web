@@ -13,6 +13,14 @@
     &--with-options{
         background-color: khaki;
         }
+        &__return{
+            background-color: honeydew;
+            margin-top: 10px;
+        }
+        &__returnarrow{
+            margin-right: 10px;
+            color: $secondary-color;
+        }
 }
 
 
