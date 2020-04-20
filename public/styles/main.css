@@ -1002,6 +1002,39 @@ body, html {
 
 .product__section {
   background-color: lightsteelblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product__info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px auto;
+}
+
+.product__gallery {
+  width: 30%;
+  margin-left: 50px;
+  margin-top: 35px;
+}
+
+.product__gallerymain {
+  width: 100%;
+}
+
+.product {
+  width: 80%;
 }
 
 .product--with-options {
@@ -1020,6 +1053,20 @@ body, html {
 
 .holis {
   background-color: hotpink;
+}
+
+.shopall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.shop__aside {
+  background-color: indianred;
 }
 
 .shop {
@@ -1043,10 +1090,6 @@ body, html {
 
 .shop__header {
   background-color: lightblue;
-}
-
-.shop__body {
-  background-color: indianred;
 }
 
 .productList {

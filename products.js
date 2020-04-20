@@ -1,8 +1,10 @@
 const products =[
     {
-        id: 1,
+        id: 0,
         title: 'Blair- Aqua',
         img: '/img/prods/prod1.JPG',
+        img2:'/img/prods/prod1-2.JPG',
+        img3:'/img/prods/prod1-3.JPG',
         minidescription: 'Deep Blue Blend With A Pale Blue Front Streak & Tips ',
         description: `The colour is - A Deep Blue Blend With A Pale Blue Front Streak & Tips. 
 
@@ -28,20 +30,22 @@ const products =[
             },
             {
                 name: 'With a glittery root: $',
-                price: 200,
+                price: 450,
             },
             {
                 name: 'Braided',
                 price: 300,
             }
         ],
-        price: 125,
+        price: 175,
         rating: 4.5,
         style: 'Blair',
     },{
-        id: 2,
+        id: 1,
         title: 'Blair- Phoenix',
         img: '/img/prods/prod2.JPG',
+        img2:'/img/prods/prod2-2.JPG',
+        img3:'/img/prods/prod2-3.JPG',
         minidescription: 'Blonde Rooted Orange & Red Ombré ',
         description: `The colour is - Blonde Rooted Orange & Red Ombré 
 
@@ -70,9 +74,11 @@ const products =[
         style: 'Blair',
          
     },{
-        id: 3,
+        id: 2,
         title: 'Blair- Dragon Fruit',
         img: '/img/prods/prod3.JPG',
+        img2:'/img/prods/prod3-2.JPG',
+        img3:'/img/prods/prod3-3.JPG',
         minidescription: 'Rooted Purple, Pink & Fuchsia Ombré',
         description: `The colour is - A Rooted Purple, Pink & Fuchsia Ombré 
 
@@ -96,13 +102,15 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         options: ['long', 'short', 'wavy'],
-        price: 100,
+        price: 200,
         rating: 4.0,
         style: 'Blair',
     },{
-        id: 4,
+        id: 3,
         title: 'Blair- Sour Grape',
         img: '/img/prods/prod4.JPG',
+        img2:'/img/prods/prod4-2.JPG',
+        img3:'/img/prods/prod4-3.JPG',
         minidescription: 'A Blonde Rooted Lilac & Purple Ombre ',
         description: `The colour is - A Blonde Rooted Lilac & Purple Ombre 
 
@@ -130,9 +138,11 @@ const products =[
         rating: 3.4,
         style: 'Blair',
     },{
-        id: 5,
+        id: 4,
         title: 'Kameron- Sour Peach',
         img: '/img/prods/prod5.JPG',
+        img2:'/img/prods/prod5-2.JPG',
+        img3:'/img/prods/prod5-3.JPG',
         minidescription: 'A Slime Green Rooted Peachy Pink ',
         description: `The colour is - A Slime Green Rooted Peachy Pink 
 
@@ -160,9 +170,11 @@ const products =[
         rating: 2.9,
         style: 'Kameron',
     },{
-        id: 6,
+        id: 5,
         title: 'Kameron- Iced Teal',
         img: '/img/prods/prod6.JPG',
+        img2:'/img/prods/prod6-2.JPG',
+        img3:'/img/prods/prod6-3.JPG',
         minidescription: 'A Light Teal Blue/Green Highlight Blend ',
         description: `The colour is - A Light Teal Blue/Green Blend 
 
@@ -192,20 +204,22 @@ const products =[
             },
             {
                 name: 'With a glittery root',
-                price: 300,
+                price: 450,
             },
             {
                 name: 'Braided',
-                price: 420,
+                price: 400,
             }
         ],
-        price: 125,
+        price: 300,
         rating: 4.7,
         style: 'Kameron',
     },{
-        id: 7,
+        id: 6,
         title: 'Kameron- Moss Green',
         img: '/img/prods/prod7.JPG',
+        img2:'/img/prods/prod7-2.JPG',
+        img3:'/img/prods/prod7-3.JPG',
         minidescription: ' A Moss Green Blend with Dark Tips ',
         description: `The colour is - A Moss Green Blend 
 
@@ -233,9 +247,11 @@ const products =[
         rating: 4.0,
         style: 'Kameron',
     },{
-        id: 8,
+        id: 7,
         title: 'Kameron- Burnt Pumpkin',
         img: '/img/prods/prod8.JPG',
+        img2:'/img/prods/prod8-2.JPG',
+        img3:'/img/prods/prod8-3.JPG',
         minidescription: 'A Light Ginger/Orange Blend',
         description: `The colour is - A Light Ginger/Orange Blend 
 
@@ -259,13 +275,15 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         options: [],
-        price: 90,
+        price: 80,
         rating: 3.5,
         style: 'Kameron',
     },{
-        id: 9,
+        id: 8,
         title: 'Florence- Cherry Swirl',
         img: '/img/prods/prod9.JPG',
+        img2:'/img/prods/prod9-2.JPG',
+        img3:'/img/prods/prod9-3.JPG',
         minidescription: 'A Rooted Pink, Brown  & Red Blend ',
         description: `The colour is-  A Rooted Pink & Red Blend 
 
@@ -293,9 +311,11 @@ const products =[
         rating: 2.5,
         style: 'Florence',
     },{
-        id: 10,
+        id: 9,
         title: 'Florence- Auburn Blend',
         img: '/img/prods/prod10.JPG',
+        img2:'/img/prods/prod10-2.JPG',
+        img3:'/img/prods/prod10-3.JPG',
         minidescription: 'A Mixed Banged Auburn/Brownish ',
         description: `The colour is - A Mixed Auburn Blend
 
@@ -323,13 +343,15 @@ const products =[
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard for all of our wigs as people have different sized foreheads and different preferences.`,
         options: ['long', 'short', 'wavy'],
-        price: 100,
+        price: 300,
         rating: 5,
         style: 'Florence',
     },{
-        id: 11,
+        id: 10,
         title: 'Florence- Berry Blast',
         img: '/img/prods/prod11.JPG',
+        img2:'/img/prods/prod11-2.JPG',
+        img3:'/img/prods/prod11-3.JPG',
         minidescription: 'Rooted Vibrant Purple & Bright Pink Ombré ',
         description: `The colour is- Rooted Vibrant Purple & Bright Pink Ombré 
 
@@ -357,9 +379,11 @@ const products =[
         rating: 3.0,
         style: 'Florence',
     },{
-        id: 12,
+        id: 11,
         title: 'Florence- Frosted Peach',
         img: '/img/prods/prod12.JPG',
+        img2:'/img/prods/prod12-2.JPG',
+        img3:'/img/prods/prod12-3.JPG',
         minidescription: 'A Peachy Icy Toned Blondish Créme',
         description: `The colour is - A Peach Toned Blonde
 
@@ -389,9 +413,11 @@ const products =[
         rating: 4.2,
         style: 'Florence',
     },{
-        id: 13,
+        id: 12,
         title: 'Isla- Candy Crush',
         img: '/img/prods/prod13.JPG',
+        img2:'/img/prods/prod13-2.JPG',
+        img3:'/img/prods/prod13-3.JPG',
         description: `The colour is - A Pink, Purple, Blue, Green & Yellow Ombre 
 
         The style is- Bouncy Spiral Curls 
@@ -421,20 +447,22 @@ const products =[
             },
             {
                 name: 'With a glittery root',
-                price: 200,
+                price: 600,
             },
             {
                 name: 'Braided',
-                price: 300,
+                price: 500,
             }
         ],
-        price: 125,
+        price: 550,
         rating: 5,
         style: 'Isla',
     },{
-        id: 14,
+        id: 13,
         title: 'Isla- Jewel Blue',
         img: '/img/prods/prod14.JPG',
+        img2:'/img/prods/prod14-2.JPG',
+        img3:'/img/prods/prod14-3.JPG',
         minidescription: 'A Deep Blue Blend Of 5 Different Blues & Turquoises ',
         description: `The colour is - A Deep Blue Blend Of 5 Different Blues & Turquoises 
 
@@ -462,9 +490,11 @@ const products =[
         rating: 4.7,
         style: 'Isla',
     },{
-        id: 15,
+        id: 14,
         title: 'Isla- Frosted Baby Pink',
         img: '/img/prods/prod15.JPG',
+        img2:'/img/prods/prod15-2.JPG',
+        img3:'/img/prods/prod15-3.JPG',
         minidescription: 'Iced Baby Pink with Silvery Tips',
         description: `The colour is - Baby Pink with White Tips
         The style is- Bouncy Spiral Curls
@@ -479,13 +509,15 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         options: [],
-        price: 180,
+        price: 300,
         rating: 3.5,
         style: 'Isla',
     },{
-        id: 16,
+        id: 15,
         title: 'Isla- Lavender Ice',
         img: '/img/prods/prod16.JPG',
+        img2:'/img/prods/prod16-2.JPG',
+        img3:'/img/prods/prod16-3.JPG',
         minidescription: 'A Metallic Lavender with Light Rottage ',
         description: `The colour is - A Metallic Lavender 
 
@@ -509,13 +541,15 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         options: [],
-        price: 180,
+        price: 200,
         rating: 3.4,
         style: 'Isla',
     },{
-        id: 17,
+        id: 16,
         title: 'Elle- Galaxy',
         img: '/img/prods/prod17.JPG',
+        img2:'/img/prods/prod17-2.JPG',
+        img3:'/img/prods/prod17-3.JPG',
         minidescription: 'A Chunked Blend Of Deep Blue, Sky Blue & Lavender',
         description: `The colour is - A Chunked Blend Of Deep Blue, Sky Blue & Lavender
 
@@ -539,13 +573,15 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         options: ['long', 'short', 'wavy'],
-        price: 75,
+        price: 90,
         rating: 5,
         style: 'Elle',
     },{
-        id: 18,
+        id: 17,
         title: 'Elle- Raspberry Swirl',
         img: '/img/prods/prod18.JPG',
+        img2:'/img/prods/prod18-2.JPG',
+        img3:'/img/prods/prod18-3.JPG',
         description: `The colour is - Bright Pink With Darker Pink Lowlights 
 
         The style is- Loose Beachy Waves
@@ -586,9 +622,11 @@ const products =[
         rating: 4.8,
         style: 'Elle',
     },{
-        id: 19,
+        id: 18,
         title: 'Elle- Pastel Dream',
         img: '/img/prods/prod19.JPG',
+        img2:'/img/prods/prod19-2.JPG',
+        img3:'/img/prods/prod19-3.JPG',
         minidescription: 'A  Blend Of Mint, Lavender, Pink, Baby Blue & Yellow',
         description: `The colour is - A Pastel Blend Of Mint, Lavender, Pink, Baby Blue & Yellow
 
@@ -612,13 +650,15 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         options: ['long', 'short', 'wavy'],
-        price: 90,
+        price: 180,
         rating: 5,
         style: 'Elle',
     },{
-        id: 20,
+        id: 19,
         title: 'Elle- Prism',
         img: '/img/prods/prod20.JPG',
+        img2:'/img/prods/prod20-2.JPG',
+        img3:'/img/prods/prod20-3.JPG',
         minidescription: 'A Rooted Rainbow Of Blue, Pink, Purple, Lime & Peach',
         description: `The colour is - A Rooted Rainbow Of Blue, Pink, Purple, Lime & Peach
 

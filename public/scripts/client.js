@@ -1,4 +1,4 @@
-// Se selecciona el elemento select Precio
+/* Se selecciona el elemento select Precio
 var select = document.querySelector('select');
 //Se agrega el listener del cambio 
 select.addEventListener('change', function (ev) {
@@ -12,14 +12,14 @@ select.addEventListener('change', function (ev) {
 });
 
 // Se selecciona el elemento select Estilo
-var select = document.querySelector('select');
+var selecc = document.querySelector('selecc');
 //Se agrega el listener del cambio 
-select.addEventListener('change', function (ev) {
+selecc.addEventListener('change', function (ev) {
     //Se crea una nueva ruta url partiendo del lugar en el que está (shop). 
-    var url = location.pathname;
+    var locate = location.pathname;
     //Se le agrega el filtro escogido 
-    url = url + '?search=' + select.value;
+    locate = url + '?search=' + selecc.value;
     //Se navega la nueva url con el filtro aplicado
-    location.href = url;
+    location.href = locate;
     console.log(url);
-});
+});*/

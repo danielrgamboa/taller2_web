@@ -6,9 +6,27 @@
 
 .product__section{
     background-color: lightsteelblue;
+    display: flex;
+    flex-direction: row;
 }
 
+.product__info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+}
+.product__gallery{
+width: 30%;
+margin-left: 50px;
+margin-top: 35px;
+}
+.product__gallerymain{
+    width: 100%;
+    
+}
 .product{
+    width: 80%;
     //background-color: lightcoral;
     &--with-options{
         background-color: khaki;

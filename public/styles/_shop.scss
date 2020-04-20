@@ -1,10 +1,17 @@
 .holis{
     background-color: hotpink;
 }
-
+.shopall{
+    display: flex;
+    flex-direction: row;
+}
+.shop__aside{
+    background-color: indianred;
+}
 .shop{
     background-color: yellow;
     max-width: 960px;
+    //width: 50%;
     margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
@@ -16,11 +23,6 @@
 .shop__header{
     background-color: lightblue;
 }
-.shop__body{
-    background-color: indianred;
-}
-
-
 .productList{
     display: flex;
     flex-wrap: wrap;

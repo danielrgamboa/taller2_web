@@ -8,9 +8,10 @@ const exphbs = require('express-handlebars');
 const products = require('./products');
 console.log(products);
 
-//Recorrer productos para agregar freeShipping (>$100)
+//Datos importantes dentro de los productos
+//Recorrer productos para agregar freeShipping (>$150)
 products.forEach(function (elem) {
-    if (elem.price >= 100) {
+    if (elem.price >= 150) {
         elem.freeShipping = true;
     } else {
         elem.freeShipping = false;
@@ -77,16 +78,6 @@ app.get('/shop', function (req, res) {
         });
     }
 
-    //Buscar productos filtrados por palabra clave
-    if (req.query.search) {
-        filtered = products.filter(function (elem) {
-            // si el nombre del producto incluye lo que el usuario buscó
-            if (elem.title.includes(req.query.search)) {
-                return true;
-            }
-        });
-    }
-
     //Buscar productos filtrados por estilo
     if (req.query.search) {
         filtered = products.filter(function (elem) {
@@ -96,8 +87,6 @@ app.get('/shop', function (req, res) {
             }
         });
     }
-
-
 
     //objeto contexto
     var context = {
