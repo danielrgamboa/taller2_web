@@ -1,6 +1,6 @@
 const products =[
     {
-        id: 0,
+
         title: 'Blair- Aqua',
         img: '/img/prods/prod1.JPG',
         img2:'/img/prods/prod1-2.JPG',
@@ -23,10 +23,11 @@ const products =[
         She has 3 combs inside sewn in for a more secure fit.
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         variations: [
             {
                 name: 'Simple',
+                price: 250,
             },
             {
                 name: 'With a glittery root: $',
@@ -41,7 +42,7 @@ const products =[
         rating: 4.5,
         style: 'Blair',
     },{
-        id: 1,
+        
         title: 'Blair- Phoenix',
         img: '/img/prods/prod2.JPG',
         img2:'/img/prods/prod2-2.JPG',
@@ -68,13 +69,13 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 100,
         rating: 4.2,
         style: 'Blair',
          
     },{
-        id: 2,
+        
         title: 'Blair- Dragon Fruit',
         img: '/img/prods/prod3.JPG',
         img2:'/img/prods/prod3-2.JPG',
@@ -101,12 +102,12 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 200,
         rating: 4.0,
         style: 'Blair',
     },{
-        id: 3,
+       
         title: 'Blair- Sour Grape',
         img: '/img/prods/prod4.JPG',
         img2:'/img/prods/prod4-2.JPG',
@@ -133,12 +134,12 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 150,
         rating: 3.4,
         style: 'Blair',
     },{
-        id: 4,
+        
         title: 'Kameron- Sour Peach',
         img: '/img/prods/prod5.JPG',
         img2:'/img/prods/prod5-2.JPG',
@@ -170,7 +171,7 @@ const products =[
         rating: 2.9,
         style: 'Kameron',
     },{
-        id: 5,
+        
         title: 'Kameron- Iced Teal',
         img: '/img/prods/prod6.JPG',
         img2:'/img/prods/prod6-2.JPG',
@@ -201,6 +202,7 @@ const products =[
         variations: [
             {
                 name: 'Simple',
+                price: 320,
             },
             {
                 name: 'With a glittery root',
@@ -215,7 +217,7 @@ const products =[
         rating: 4.7,
         style: 'Kameron',
     },{
-        id: 6,
+        
         title: 'Kameron- Moss Green',
         img: '/img/prods/prod7.JPG',
         img2:'/img/prods/prod7-2.JPG',
@@ -247,7 +249,7 @@ const products =[
         rating: 4.0,
         style: 'Kameron',
     },{
-        id: 7,
+        
         title: 'Kameron- Burnt Pumpkin',
         img: '/img/prods/prod8.JPG',
         img2:'/img/prods/prod8-2.JPG',
@@ -279,7 +281,7 @@ const products =[
         rating: 3.5,
         style: 'Kameron',
     },{
-        id: 8,
+       
         title: 'Florence- Cherry Swirl',
         img: '/img/prods/prod9.JPG',
         img2:'/img/prods/prod9-2.JPG',
@@ -306,12 +308,12 @@ const products =[
          
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard as people have different sized foreheads and different preferences.`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 75,
         rating: 2.5,
         style: 'Florence',
     },{
-        id: 9,
+       
         title: 'Florence- Auburn Blend',
         img: '/img/prods/prod10.JPG',
         img2:'/img/prods/prod10-2.JPG',
@@ -342,12 +344,12 @@ const products =[
          
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard for all of our wigs as people have different sized foreheads and different preferences.`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 300,
         rating: 5,
         style: 'Florence',
     },{
-        id: 10,
+        
         title: 'Florence- Berry Blast',
         img: '/img/prods/prod11.JPG',
         img2:'/img/prods/prod11-2.JPG',
@@ -374,12 +376,12 @@ const products =[
          
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard as people have different sized foreheads and different preferences.`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 150,
         rating: 3.0,
         style: 'Florence',
     },{
-        id: 11,
+        
         title: 'Florence- Frosted Peach',
         img: '/img/prods/prod12.JPG',
         img2:'/img/prods/prod12-2.JPG',
@@ -408,12 +410,12 @@ const products =[
         Includes a free wig cap & Care and restyling guide!
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard for all of our wigs as people have different sized foreheads and different preferences.`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 80,
         rating: 4.2,
         style: 'Florence',
     },{
-        id: 12,
+        
         title: 'Isla- Candy Crush',
         img: '/img/prods/prod13.JPG',
         img2:'/img/prods/prod13-2.JPG',
@@ -440,25 +442,26 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         minidescription: 'A Pink, Purple, Blue, Green & Yellow Ombre',
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         variations: [
             {
                 name: 'Simple',
+                price: 620
             },
             {
                 name: 'With a glittery root',
-                price: 600,
+                price: 750,
             },
             {
                 name: 'Braided',
-                price: 500,
+                price: 1000,
             }
         ],
         price: 550,
         rating: 5,
         style: 'Isla',
     },{
-        id: 13,
+       
         title: 'Isla- Jewel Blue',
         img: '/img/prods/prod14.JPG',
         img2:'/img/prods/prod14-2.JPG',
@@ -490,7 +493,7 @@ const products =[
         rating: 4.7,
         style: 'Isla',
     },{
-        id: 14,
+        
         title: 'Isla- Frosted Baby Pink',
         img: '/img/prods/prod15.JPG',
         img2:'/img/prods/prod15-2.JPG',
@@ -513,7 +516,7 @@ const products =[
         rating: 3.5,
         style: 'Isla',
     },{
-        id: 15,
+       
         title: 'Isla- Lavender Ice',
         img: '/img/prods/prod16.JPG',
         img2:'/img/prods/prod16-2.JPG',
@@ -545,7 +548,7 @@ const products =[
         rating: 3.4,
         style: 'Isla',
     },{
-        id: 16,
+        
         title: 'Elle- Galaxy',
         img: '/img/prods/prod17.JPG',
         img2:'/img/prods/prod17-2.JPG',
@@ -572,12 +575,12 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 90,
         rating: 5,
         style: 'Elle',
     },{
-        id: 17,
+        
         title: 'Elle- Raspberry Swirl',
         img: '/img/prods/prod18.JPG',
         img2:'/img/prods/prod18-2.JPG',
@@ -604,25 +607,26 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         minidescription: 'Bright Pink With Darker Pink Lowlights ',
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         variations: [
             {
                 name: 'Simple',
+                price:250,
             },
             {
                 name: 'With a glittery root',
-                price: 200,
+                price: 360,
             },
             {
                 name: 'Braided',
-                price: 300,
+                price: 520,
             }
         ],
         price: 185,
         rating: 4.8,
         style: 'Elle',
     },{
-        id: 18,
+      
         title: 'Elle- Pastel Dream',
         img: '/img/prods/prod19.JPG',
         img2:'/img/prods/prod19-2.JPG',
@@ -649,12 +653,12 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 180,
         rating: 5,
         style: 'Elle',
     },{
-        id: 19,
+        
         title: 'Elle- Prism',
         img: '/img/prods/prod20.JPG',
         img2:'/img/prods/prod20-2.JPG',
@@ -681,7 +685,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['long', 'short', 'wavy'],
+        options: ['Long', 'Short', 'Wavy'],
         price: 90,
         rating: 4.5,
         style: 'Elle',

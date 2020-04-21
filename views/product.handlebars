@@ -4,15 +4,22 @@
     <div class="product__return"><span class="product__returnarrow"><i class="fas fa-chevron-left"></i></span><a
             href="/shop" target="_self"></i>Return to results</a></div>
 
+    <!--Galería del producto individual -->
     <section class="product__section">
         <div class="product__gallery">
-        <img class="product__gallerymain" src="{{ img }}" alt="">
+            <img class="product__gallerymain" src="" alt="">
+            <div class="product__gallerythumbs">
+                <img class="product__gallerythumb" src="{{ img }}" alt="">
+                <img class="product__gallerythumb" src="{{ img2 }}" alt="">
+                <img class="product__gallerythumb" src="{{ img3 }}" alt="">
+
+            </div>
 
         </div>
+        <!--Información del producto individual -->
         <div class="product__info">
-        <h2 class="product__title">{{ title }}</h2>
-        <h3>${{ price }}</h3>
-            <p class="product__description">{{ description }}</p>
+            <h2 class="product__title">{{ title }}</h2>
+            <h3>${{ price }}</h3>
             <!--cuando el producto tiene opciones disponibles (larga, corta, lisa, rizada) -->
             {{# if options}}
             <h3>This wig has these customable styles</h3>
@@ -28,7 +35,7 @@
             <h3>You can customize the wig</h3>
             <ol>
                 {{#each variations}}
-                <li>{{ name }} <strong>{{ price }}</strong></li>
+                <li>{{ name }} $:<strong>{{ price }}</strong></li>
                 {{/each}}
             </ol>
             {{/if}}
@@ -48,13 +55,11 @@
             {{#if topSeller}}
             <h3>This wig is a Top Seller in the world</h3>
             {{/if}}
+            <p class="product__description">{{ description }}</p>
 
         </div>
     </section>
 
-
-
-
-
-
 </div>
+
+<script src="/scripts/product.js"></script>

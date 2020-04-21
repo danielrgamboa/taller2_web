@@ -99,6 +99,8 @@ app.get('/shop', function (req, res) {
 
 //Abrir la página del detalle del producto de la página.
 app.get('/product/:name/:id', function (req, res) {
+    var id= parseInt(req.params.id);
+    var produ= products[id];
     console.log('hola en product');
 
     //objeto contexto 
@@ -124,7 +126,7 @@ app.get('/product/:name/:id', function (req, res) {
     console.log(req.params.name);
 
     //res.send('pagina de checkout');
-    res.render('product', context);
+    res.render('product', produ);
 });
 
 //Abrir la página de checkout de la página.

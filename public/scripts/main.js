@@ -16,7 +16,7 @@ function handleWindowResize (event) {
 }
 window.addEventListener('resize', handleWindowResize);
 
-//Galeria de productos ecommerce
+//Galeria de productos ecommerce (Taller1)
 
 var main = document.querySelector('.galery__main');
 var thumbs = document.querySelectorAll('.galery__thumb');
@@ -38,7 +38,5 @@ function iterateThumbs (elem, index) {
 }
 thumbs.forEach(iterateThumbs);
 handleImageClick(thumbs[0]);
-
-
 
 
