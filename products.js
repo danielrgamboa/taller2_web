@@ -1,6 +1,5 @@
 const products =[
     {
-
         title: 'Blair- Aqua',
         img: '/img/prods/prod1.JPG',
         img2:'/img/prods/prod1-2.JPG',

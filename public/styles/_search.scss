@@ -100,6 +100,16 @@
     -webkit-transition: background-color .3s ease;
     transition: background-color .3s ease;
     outline: none;
+    
+  }
+  .search__carrito{
+    color: white;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 6px;
+    height: 100%;
+    width: 20%;
+    outline: none;
   }
   
   .search__logo{

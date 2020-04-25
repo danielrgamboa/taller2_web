@@ -275,6 +275,18 @@ body, html {
   outline: none;
 }
 
+.search__carrito {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 6px;
+  height: 100%;
+  width: 20%;
+  outline: none;
+}
+
 .search__logo {
   height: 50%;
   width: auto;
@@ -1011,6 +1023,26 @@ body, html {
           flex-direction: row;
 }
 
+.product__gallery {
+  background-color: lime;
+}
+
+@media (max-width: 414px) {
+  .product__gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .product__info {
   width: 30%;
   display: -webkit-box;
@@ -1061,8 +1093,9 @@ body, html {
   padding: 10px;
 }
 
-.product {
-  max-width: 1200px;
+.producti {
+  background-color: mediumaquamarine;
+  max-width: 960px;
   margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1079,16 +1112,28 @@ body, html {
           justify-content: space-between;
 }
 
-.product--with-options {
-  background-color: khaki;
+@media (max-width: 414px) {
+  .producti {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-.product__return {
+.producti__return {
   background-color: honeydew;
   margin-top: 10px;
 }
 
-.product__returnarrow {
+.producti__returnarrow {
   margin-right: 10px;
   color: #34495E;
 }
@@ -1105,6 +1150,18 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background-color: lightskyblue;
+}
+
+@media (max-width: 960px) {
+  .shopall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .shop__aside {
@@ -1173,6 +1230,7 @@ body, html {
   .thumb {
     margin-top: 20px;
     width: 100%;
+    height: auto;
     margin: 0px;
     margin-bottom: 20px;
   }
