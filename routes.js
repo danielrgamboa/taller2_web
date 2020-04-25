@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 function configureRoutes(app, db) {
 
     //Abrir la homepage de la página.
@@ -15,7 +17,7 @@ function configureRoutes(app, db) {
         //response con texto normal
         //res.send('pagina de shop');
 
-        //Datos importantes dentro de los productos
+        /*/Datos importantes dentro de los productos
         //Recorrer productos para agregar freeShipping (>$150)
         products.forEach(function (elem) {
             if (elem.price >= 150) {
@@ -41,26 +43,42 @@ function configureRoutes(app, db) {
             } else {
                 elem.topSeller = false;
             }
-        });
+        });*/
 
-        //Buscar productos filtrados por precio 
+        var filters ={
+
+        }
+
+        //Buscar productos filtrados por precio-menor
         if (req.query.price_lt) {
+            //crear copia del arreglo filtrado 
+        }
+
+        //Buscar productos filtrados por precio -mayor
+        if (req.query.price_gt) {
             //crear copia del arreglo filtrado 
         }
 
         //Buscar productos filtrados por estilo
         if (req.query.search) {
- 
-        }
 
-        //objeto contexto
-        var context = {
-            //products: products,
-            products: filtered,
         }
-        //response con un handlebar-debe ser renderizado para que siempre se actualice.
-        res.render('store', context);
+        // Get the documents collection
+        const collection = db.collection('products');
+        // Find some documents
+        collection.find({filters}).toArray(function (err, docs) {
+            assert.equal(err, null);
+            //objeto contexto
+            var context = {
+                //products: products,
+                products: docs,
+            }
+            //response con un handlebar-debe ser renderizado para que siempre se actualice.
+            res.render('store', context);
+        });
+
     });
+
 
     //Abrir la página del detalle del producto de la página.
     app.get('/product/:name/:id', function (req, res) {
