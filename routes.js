@@ -45,39 +45,77 @@ function configureRoutes(app, db) {
             }
         });*/
 
-        var filters ={
-
-        }
+        var filters = {
+            $and: []
+        };
 
         //Buscar productos filtrados por precio-menor
         if (req.query.price_lt) {
-            //crear copia del arreglo filtrado 
+            filters.$and.push({
+                //crear  arreglo filtrado
+                price: {
+                    $lte: parseInt(req.query.price_lt)
+                }
+
+            });
         }
 
-        //Buscar productos filtrados por precio -mayor
+        //Buscar productos filtrados por precio-mayor
         if (req.query.price_gt) {
-            //crear copia del arreglo filtrado 
+            filters.$and.push({
+                //crear  arreglo filtrado
+                price: {
+                    $gte: parseInt(req.query.price_gt)
+                }
+
+            });
         }
 
         //Buscar productos filtrados por estilo
         if (req.query.search) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                name: {
+                    $regex: new RegExp(req.query.search, 'i'),
+                }
+
+            });
 
         }
+
+        //Ordenamientos ascendente y descendente
+        var sortings ={};
+        if(req.query.sort == 'price_desc'){
+            sortings.price = -1;
+        }
+        if(req.query.sort == 'price_asce'){
+            sortings.price = 1;
+        }
+
+
         // Get the documents collection
         const collection = db.collection('products');
         // Find some documents
-        collection.find({filters}).toArray(function (err, docs) {
+        collection.find({ filters }).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
+
+
             //objeto contexto
             var context = {
                 //products: products,
                 products: docs,
             }
+
             //response con un handlebar-debe ser renderizado para que siempre se actualice.
             res.render('store', context);
         });
 
     });
+
+    // GET - Traer o leer información del servidor
+    // POST - Agregar nueva información al servidor 
+    // PUT - Actualizar información ya existente en el servidor
+    // DELETE - Borrar información del servidor  
 
 
     //Abrir la página del detalle del producto de la página.
@@ -95,17 +133,10 @@ function configureRoutes(app, db) {
                 return true;
             }
         });
+
+
         //Pasar las variables de ese elemento al contexto 
         context = foundElement;
-
-        /*if(req.params.name === 'arcoiris'){
-            context ={};
-        }
-    
-        if(req.params.name === 'diva'){
-            context = {}; 
-        }*/
-
         console.log(req.params.name);
 
         //res.send('pagina de checkout');

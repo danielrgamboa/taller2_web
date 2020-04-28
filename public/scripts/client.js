@@ -1,4 +1,4 @@
-/* Se selecciona el elemento select Precio
+//Se selecciona el elemento select Precio
 var select = document.querySelector('select');
 //Se agrega el listener del cambio 
 select.addEventListener('change', function (ev) {
@@ -11,7 +11,7 @@ select.addEventListener('change', function (ev) {
     console.log(url);
 });
 
-// Se selecciona el elemento select Estilo
+/*/ Se selecciona el elemento select Estilo
 var selecc = document.querySelector('selecc');
 //Se agrega el listener del cambio 
 selecc.addEventListener('change', function (ev) {

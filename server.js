@@ -1,3 +1,4 @@
+//Importar el programa Mlongodb a VStudio 
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
@@ -7,6 +8,7 @@ const path = require('path');
 //Importar express-handlebars
 const exphbs = require('express-handlebars');
 
+//Importar la información de la Route.js
 const configureRoutes =require('./routes');
 
 //Importar la libreria express
