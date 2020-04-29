@@ -1,4 +1,5 @@
 const assert = require('assert');
+const ObjectId = require('mongodb').ObjectId;
 
 function configureRoutes(app, db) {
 
@@ -83,12 +84,17 @@ function configureRoutes(app, db) {
 
         }
 
+        //Eliminar los filtros apenas entre a la página de shop--(Error de $and)
+        if (filters.$and.length === 0) {
+            delete filters.$and;
+        }
+
         //Ordenamientos ascendente y descendente
-        var sortings ={};
-        if(req.query.sort == 'price_desc'){
+        var sortings = {};
+        if (req.query.sort == 'price_desc') {
             sortings.price = -1;
         }
-        if(req.query.sort == 'price_asce'){
+        if (req.query.sort == 'price_asce') {
             sortings.price = 1;
         }
 
@@ -120,10 +126,39 @@ function configureRoutes(app, db) {
 
     //Abrir la página del detalle del producto de la página.
     app.get('/product/:name/:id', function (req, res) {
-        var id = parseInt(req.params.id);
-        var produ = products[id];
-        console.log('hola en product');
+        if (req.params.id.length != 24) {
+            res.redirect('/404');
+        }
 
+        const filter = {
+
+            _id: {
+                $eq: new ObjectId(req.params.id)
+            }
+        };
+
+        // Get the documents collection
+        const collection = db.collection('products');
+        // Find some documents
+        collection.find({ filter }).toArray(function (err, docs) {
+            assert.equal(err, null);
+
+
+            //Redireccionar al usuario a página de 404 cuando el producto no se encuentra
+            if (docs.length == 0) {
+                res.redirect('/404');
+            }
+
+
+            //objeto contexto
+            var context = docs[0];
+            console.log(docs);
+
+            //response con un handlebar-debe ser renderizado para que siempre se actualice.
+            res.render('product', context);
+        });
+
+        //PREGUNTAR AL PROFE QUE SE HACE CON ESTO?
         //objeto contexto 
         var context = {};
 
@@ -134,13 +169,10 @@ function configureRoutes(app, db) {
             }
         });
 
-
         //Pasar las variables de ese elemento al contexto 
         context = foundElement;
         console.log(req.params.name);
 
-        //res.send('pagina de checkout');
-        res.render('product', produ);
     });
 
     //Abrir la página de checkout de la página.
@@ -152,6 +184,23 @@ function configureRoutes(app, db) {
         var context = {};
         res.render('checkout', context);
     });
+
+    //Recibir información de la página de checkout
+    app.post('/checkout', function (req, res) {
+        res.send('test');
+        console.log('req.body ');
+    });
+
+    //Abrir página de error 404 (element not found)
+    app.get('/404', function (req, res) {
+        console.log('hola en 404');
+
+        //objeto contexto 
+        var context = {};
+        res.render('404', context);
+    });
+
+
 }
 
 module.exports = configureRoutes;

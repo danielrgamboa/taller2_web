@@ -13,11 +13,17 @@ const configureRoutes =require('./routes');
 
 //Importar la libreria express
 const express = require('express');
+
 //Instanciar servidor express
 const app = express();
 
+//Enviar información del checkout al servidor
+app.use(express.urlencoded({extended: true}));
+
 //Registrar motor de render para handlebars
 app.engine('handlebars', exphbs());
+
+
 //Use el motor de render handlebars
 app.set('view engine', 'handlebars');
 
