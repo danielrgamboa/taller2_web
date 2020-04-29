@@ -18,34 +18,6 @@ function configureRoutes(app, db) {
         //response con texto normal
         //res.send('pagina de shop');
 
-        /*/Datos importantes dentro de los productos
-        //Recorrer productos para agregar freeShipping (>$150)
-        products.forEach(function (elem) {
-            if (elem.price >= 150) {
-                elem.freeShipping = true;
-            } else {
-                elem.freeShipping = false;
-            }
-        });
-
-        //Recorrer productos para agregar kardashianAproved (>$100)
-        products.forEach(function (elem) {
-            if (elem.price >= 100) {
-                elem.kardashianAproved = true;
-            } else {
-                elem.kardashianAproved = false;
-            }
-        });
-
-        //Recorrer productos para agregar topSeller (>3.5)
-        products.forEach(function (elem) {
-            if (elem.rating >= 4.3) {
-                elem.topSeller = true;
-            } else {
-                elem.topSeller = false;
-            }
-        });*/
-
         var filters = {
             $and: []
         };
@@ -102,9 +74,36 @@ function configureRoutes(app, db) {
         // Get the documents collection
         const collection = db.collection('products');
         // Find some documents
-        collection.find({ filters }).sort(sortings).toArray(function (err, docs) {
+        collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
+            
+            //Datos importantes dentro de los productos
+            //Recorrer productos para agregar freeShipping (>$150)
+            docs.forEach(function (elem) {
+                if (elem.price >= 150) {
+                    elem.freeShipping = true;
+                } else {
+                    elem.freeShipping = false;
+                }
+            });
 
+            //Recorrer productos para agregar kardashianAproved (>$100)
+            docs.forEach(function (elem) {
+                if (elem.price >= 100) {
+                    elem.kardashianAproved = true;
+                } else {
+                    elem.kardashianAproved = false;
+                }
+            });
+
+            //Recorrer productos para agregar topSeller (>3.5)
+            docs.forEach(function (elem) {
+                if (elem.rating >= 4.3) {
+                    elem.topSeller = true;
+                } else {
+                    elem.topSeller = false;
+                }
+            });
 
             //objeto contexto
             var context = {
@@ -140,7 +139,7 @@ function configureRoutes(app, db) {
         // Get the documents collection
         const collection = db.collection('products');
         // Find some documents
-        collection.find({ filter }).toArray(function (err, docs) {
+        collection.find(filter).toArray(function (err, docs) {
             assert.equal(err, null);
 
 
@@ -158,20 +157,6 @@ function configureRoutes(app, db) {
             res.render('product', context);
         });
 
-        //PREGUNTAR AL PROFE QUE SE HACE CON ESTO?
-        //objeto contexto 
-        var context = {};
-
-        //Buscar en la base de datos el elemento correspondiente
-        var foundElement = products.find(function (elem) {
-            if (elem.id == req.params.id) {
-                return true;
-            }
-        });
-
-        //Pasar las variables de ese elemento al contexto 
-        context = foundElement;
-        console.log(req.params.name);
 
     });
 

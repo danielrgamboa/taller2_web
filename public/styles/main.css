@@ -1311,4 +1311,29 @@ body, html {
 .thumb__button:hover {
   background-color: goldenrod;
 }
+
+.error__container {
+  background-color: mediumseagreen;
+}
+
+.error__img {
+  margin-top: 20px;
+  max-width: 960px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 5px;
+}
+
+@media (max-width: 960px) {
+  .error__img {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100%;
+    height: auto;
+  }
+}
 /*# sourceMappingURL=main.css.map */

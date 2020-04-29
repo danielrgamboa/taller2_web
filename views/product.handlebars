@@ -23,10 +23,13 @@
             <!--cuando el producto tiene opciones disponibles (larga, corta, lisa, rizada) -->
             {{# if options}}
             <h3>This wig has these customable styles</h3>
+            <p>
             {{#each options}}
-            <p>{{ this }}</p>
+            <span>{{ this }}</span>
             {{/each}}
+            </p>
             {{else}}
+
             <h3>This wig has a unique style</h3>
             {{/if}}
 
@@ -39,7 +42,6 @@
                 {{/each}}
             </ol>
             {{/if}}
-
 
             <!--cuando la peluca tiene freeShipping (>$100) -->
             {{#if freeShipping}}
