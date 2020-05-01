@@ -22,11 +22,11 @@
             <h3>${{ price }}</h3>
             <!--cuando el producto tiene opciones disponibles (larga, corta, lisa, rizada) -->
             {{# if options}}
-            <h3>This wig has these customable styles</h3>
+            <h3>This wig has these customable styles:</h3>
             <p>
-            {{#each options}}
-            <span>{{ this }}</span>
-            {{/each}}
+                {{#each options}}
+                <span>{{ this }}</span>
+                {{/each}}
             </p>
             {{else}}
 
@@ -59,7 +59,9 @@
             {{/if}}
             <p class="product__description">{{ description }}</p>
 
-            <a href="/checkout" target="_blank" class="cart-btn"><i class="fas fa-heart"></i>Add to cart</a>
+            <span class="product-bot">
+            <a href="/checkout" target="_self" class="prod-btn"><i class="fas fa-heart"></i>Add to cart</a>
+            </span>
         </div>
     </section>
 

@@ -1,7 +1,8 @@
 .product__description{
-    //color: goldenrod;
     background-color: orchid;
     font-size: 20px;
+    width: 100%;
+    display: flex;
 }
 
 .product__section{
@@ -9,24 +10,63 @@
     display: flex;
     flex-direction: row;
 
-}
+    @media(max-width: $breakpoint-sm){
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            background-color: midnightblue;
+            width: 100%;
+  
+        }
+      }
 
 .product__gallery{
     background-color: lime;
+    width: 50%;
+    margin-right: 30px;
     @media (max-width: $breakpoint-sm) {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
+        background-color: mistyrose;
 
 }
 }
+
+.prod-btn{
+    width: 40%;
+    display: inline-block;
+    background-color: $primary-color;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+
+    @media (max-width: $breakpoint-sm){
+        display: flex;
+        background-color: #ffb031 ;
+    }
+  }
+  .prod-btn:hover {
+    background-color: #ffb031;
+  }
 
 .product__info{
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     margin: 0px auto;
+    background-color: mistyrose;
+}
+
+.product-bot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: olive;
 }
 
 
@@ -51,10 +91,6 @@ margin-top: 35px;
     object-fit: cover;
     object-position: center;
 }
-.product__gallerythumb--active{
-    border: 10px solid lightcoral;
-    padding: 10px;
-}
 
 .producti{
     background-color: mediumaquamarine;
@@ -65,23 +101,27 @@ margin-top: 35px;
     padding: 0px 5px;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 50px;
+    margin-top: 30px;
+
     @media(max-width: $breakpoint-sm){
         &{
-            display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            max-width: 100%;
-            height: auto;
+            background-color: purple;
+  
         }
       }
-        &__return{
-            background-color: honeydew;
-            margin-top: 10px;
-        }
-        &__returnarrow{
-            margin-right: 10px;
-            color: $secondary-color;
-        }
+}
+.product__returnarrow{
+    color: $primary-color;
+    margin-right: 13px;
+}
+
+.product__return{
+    background-color: orange;
+    display: flex;
+    outline: none;
 }
 
 

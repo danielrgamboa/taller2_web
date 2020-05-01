@@ -160,7 +160,7 @@ function configureRoutes(app, db) {
 
     });
 
-    //Abrir la página de checkout de la página.
+    //Abrir la página de checkout de la página-tipo GET
     app.get('/checkout', function (req, res) {
         console.log('hola en checkout');
         //res.send('pagina de checkout');
@@ -170,10 +170,10 @@ function configureRoutes(app, db) {
         res.render('checkout', context);
     });
 
-    //Recibir información de la página de checkout
+    //Recibir información de la página de checkout-tipo POST
     app.post('/checkout', function (req, res) {
         res.send('test');
-        console.log('req.body ');
+        console.log(req.body);
     });
 
     //Abrir página de error 404 (element not found)

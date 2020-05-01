@@ -22,14 +22,14 @@ const products =[
         She has 3 combs inside sewn in for a more secure fit.
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         variations: [
             {
                 name: 'Simple',
                 price: 250,
             },
             {
-                name: 'With a glittery root: $',
+                name: 'With a glittery root:',
                 price: 450,
             },
             {
@@ -68,7 +68,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 100,
         rating: 4.2,
         style: 'Blair',
@@ -101,7 +101,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 200,
         rating: 4.0,
         style: 'Blair',
@@ -133,7 +133,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 150,
         rating: 3.4,
         style: 'Blair',
@@ -307,7 +307,7 @@ const products =[
          
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard as people have different sized foreheads and different preferences.`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 75,
         rating: 2.5,
         style: 'Florence',
@@ -343,7 +343,7 @@ const products =[
          
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard for all of our wigs as people have different sized foreheads and different preferences.`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 300,
         rating: 5,
         style: 'Florence',
@@ -375,7 +375,7 @@ const products =[
          
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard as people have different sized foreheads and different preferences.`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 150,
         rating: 3.0,
         style: 'Florence',
@@ -409,7 +409,7 @@ const products =[
         Includes a free wig cap & Care and restyling guide!
         
         Please Note- All of our Hard Front wigs come with a standard length fringe for customers to trim themselves if required, this is not a defect and is a standard for all of our wigs as people have different sized foreheads and different preferences.`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 80,
         rating: 4.2,
         style: 'Florence',
@@ -441,7 +441,7 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         minidescription: 'A Pink, Purple, Blue, Green & Yellow Ombre',
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         variations: [
             {
                 name: 'Simple',
@@ -574,7 +574,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 90,
         rating: 5,
         style: 'Elle',
@@ -606,7 +606,7 @@ const products =[
         
         Includes a free wig cap & Care and restyling guide!`,
         minidescription: 'Bright Pink With Darker Pink Lowlights ',
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         variations: [
             {
                 name: 'Simple',
@@ -652,7 +652,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 180,
         rating: 5,
         style: 'Elle',
@@ -684,7 +684,7 @@ const products =[
          
         
         Includes a free wig cap & Care and restyling guide!`,
-        options: ['Long', 'Short', 'Wavy'],
+        options: ['Long,', 'Short,', 'Wavy'],
         price: 90,
         rating: 4.5,
         style: 'Elle',
