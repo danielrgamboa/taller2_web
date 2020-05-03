@@ -16,8 +16,17 @@
       }
     
 }
-.shop__aside{
-    background-color: indianred;
+.shopaside{
+    background-color: #d9d3da;
+    width: 350px;
+    padding: 0px 40px;
+   
+
+    &__link{
+        list-style-image: url(/img/favicon.ico);
+        text-decoration: none;
+        color: black;
+    }
 }
 .shop{
     background-color: yellow;

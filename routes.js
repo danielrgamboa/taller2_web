@@ -22,29 +22,45 @@ function configureRoutes(app, db) {
             $and: []
         };
 
-        //Buscar productos filtrados por precio-menor
-        if (req.query.price_lt) {
-            filters.$and.push({
-                //crear  arreglo filtrado
-                price: {
-                    $lte: parseInt(req.query.price_lt)
-                }
-
-            });
-        }
-
-        //Buscar productos filtrados por precio-mayor
-        if (req.query.price_gt) {
-            filters.$and.push({
-                //crear  arreglo filtrado
-                price: {
-                    $gte: parseInt(req.query.price_gt)
-                }
-
-            });
-        }
-
         //Buscar productos filtrados por estilo
+        if (req.query.style) {
+            //crear  arreglo filtrado
+            filters.style = {
+                $eq: req.query.style
+            }
+        }
+
+        //Buscar productos filtrados por rating mayor
+        if (req.query.rating_gte) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $gte: parseInt(req.query.rating_gte)
+                }
+
+            });
+        }
+
+        //Buscar productos filtrados por rating menor
+        if (req.query.rating_lte) {
+            filters.$and.push({
+                //crear  arreglo filtrado
+                rating: {
+                    $lte: parseInt(req.query.rating_lte)
+                }
+
+            });
+        }
+
+        //Buscar productos filtrados por KardashianApproved
+        if (req.query.priceKardashian) {
+            //crear  arreglo filtrado
+            filters.price = {
+                $gte: parseInt(req.query.priceKardashian)
+            }
+        }
+
+        //Buscar productos filtrados por busqueda
         if (req.query.search) {
             filters.$and.push({
                 //crear  arreglo filtrado
@@ -61,7 +77,7 @@ function configureRoutes(app, db) {
             delete filters.$and;
         }
 
-        //Ordenamientos ascendente y descendente
+        //Ordenamientos ascendente y descendente de precio 
         var sortings = {};
         if (req.query.sort == 'price_desc') {
             sortings.price = -1;
@@ -76,7 +92,7 @@ function configureRoutes(app, db) {
         // Find some documents
         collection.find(filters).sort(sortings).toArray(function (err, docs) {
             assert.equal(err, null);
-            
+
             //Datos importantes dentro de los productos
             //Recorrer productos para agregar freeShipping (>$150)
             docs.forEach(function (elem) {

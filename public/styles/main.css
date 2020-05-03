@@ -284,6 +284,7 @@ body, html {
   margin-top: 6px;
   height: 100%;
   width: 20%;
+  text-decoration: none;
 }
 
 .search__logo {
@@ -1222,8 +1223,16 @@ body, html {
   }
 }
 
-.shop__aside {
-  background-color: indianred;
+.shopaside {
+  background-color: #d9d3da;
+  width: 350px;
+  padding: 0px 40px;
+}
+
+.shopaside__link {
+  list-style-image: url(/img/favicon.ico);
+  text-decoration: none;
+  color: black;
 }
 
 .shop {
