@@ -101,6 +101,7 @@ function configureRoutes(app, db) {
             docs.forEach(function (elem) {
                 if (elem.price >= 150) {
                     elem.freeShipping = true;
+                    console.log(elem);
                 } else {
                     elem.freeShipping = false;
                 }

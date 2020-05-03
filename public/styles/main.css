@@ -1235,6 +1235,26 @@ body, html {
   color: black;
 }
 
+@media (max-width: 414px) {
+  .shopaside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 10px;
+    background-color: mediumturquoise;
+  }
+}
+
+.shopaside__filter:hover {
+  background-color: #34495E;
+}
+
+.shopaside__filter:nth-child(1) {
+  margin-left: -10px;
+  width: 100%;
+}
+
 .shop {
   background-color: yellow;
   max-width: 960px;
@@ -1264,6 +1284,7 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 20px;
 }
 
 .productList {

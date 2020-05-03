@@ -27,7 +27,27 @@
         text-decoration: none;
         color: black;
     }
+    @media(max-width: $breakpoint-sm){
+        &{
+            flex-direction: column;
+            padding: 30px 10px;
+            background-color: mediumturquoise;
+
+  
+        }
+      }
+
 }
+
+.shopaside__filter:hover{
+    background-color: $secondary-color;
+}
+.shopaside__filter:nth-child(1){
+    margin-left: -10px;
+    width: 100%;
+}
+
+
 .shop{
     background-color: yellow;
     max-width: 960px;
@@ -44,6 +64,7 @@
     display: flex;
     margin-top: 30px;
     flex-direction: column;
+    margin-left: 20px;
 
 }
 .productList{
