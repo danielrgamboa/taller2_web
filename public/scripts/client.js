@@ -1,25 +1,19 @@
-//Se selecciona el elemento select Precio
-var select = document.querySelector('select');
-//Se agrega el listener del cambio 
-select.addEventListener('change', function (ev) {
-    //Se crea una nueva ruta url partiendo del lugar en el que está (shop). 
-    var url = location.pathname;
-    //Se le agrega el filtro escogido 
-    url = url + '?price_lt=' + select.value;
-    //Se navega la nueva url con el filtro aplicado
+//Buscar en la busqueda principal 
+var url= location.pathname;
+
+var button = document.querySelector('.search__button');
+console.log(button);
+button.addEventListener('click', function() {
+    var input = document.querySelector('.search__input');
+    console.log(input);
+    var search = input.value;
+    url = url + '?search=' + search;
     location.href = url;
-    console.log(url);
 });
 
-/*/ Se selecciona el elemento select Estilo
-var selecc = document.querySelector('selecc');
-//Se agrega el listener del cambio 
-selecc.addEventListener('change', function (ev) {
-    //Se crea una nueva ruta url partiendo del lugar en el que está (shop). 
-    var locate = location.pathname;
-    //Se le agrega el filtro escogido 
-    locate = url + '?search=' + selecc.value;
-    //Se navega la nueva url con el filtro aplicado
-    location.href = locate;
-    console.log(url);
-});*/
+//Ordenamientos de la página shop 
+var select = document.querySelector('.select-css');
+select.addEventListener('change', function(ev){
+    url = url + '?sort=' + select.value;
+    location.href = url;
+});

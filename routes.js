@@ -63,13 +63,10 @@ function configureRoutes(app, db) {
         //Buscar productos filtrados por busqueda
         if (req.query.search) {
             filters.$and.push({
-                //crear  arreglo filtrado
-                name: {
+                title: {
                     $regex: new RegExp(req.query.search, 'i'),
-                }
-
+                },
             });
-
         }
 
         //Eliminar los filtros apenas entre a la página de shop--(Error de $and)
@@ -84,6 +81,12 @@ function configureRoutes(app, db) {
         }
         if (req.query.sort == 'price_asce') {
             sortings.price = 1;
+        }
+        if (req.query.sort == 'name_asce') {
+            sortings.name = 1;
+        }
+        if (req.query.sort == 'name_desc') {
+            sortings.name = -1;
         }
 
 
