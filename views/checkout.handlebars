@@ -9,54 +9,72 @@
                         <i class="fas fa-shipping-fast"></i>
                         Shipping Details
                     </h1>
+                    {{#if showError}}
+                    <section>
+                        <h3 class="checkouterror">Oh No! Error!</h3>
+                        <p>It looks like something went wrong. Plase try to place the order again</p>
+                    </section>
+                    {{/if}}
+
+
                     <div class="checkname">
                         <div>
                             <label for="fname">Name</label>
-                            <input type="text" name="fname" required= "true">
+                            <input type="text" name="fname" required="true">
                         </div>
                         <div>
                             <label for="lname">Last name</label>
-                            <input type="text" name="lname" required= "true">
+                            <input type="text" name="lname" required="true">
                         </div>
                     </div>
                     <div class="checkstreet">
                         <label for="name">Country</label>
-                        <input type="text" name="country" required= "true">
+                        <input type="text" name="country" required="true">
                     </div>
                     <div class="checkstreet">
                         <label for="name">Address</label>
-                        <input type="text" name="address" required= "true">
+                        <input type="text" name="address" required="true">
                     </div>
                     <div class="checkaddress-info">
                         <div>
                             <label for="city">City</label>
-                            <input type="text" name="city" required= "true">
+                            <input type="text" name="city" required="true">
                         </div>
                         <div>
                             <label for="state">State</label>
-                            <input type="text" name="state" required= "true">
+                            <input type="text" name="state" required="true">
                         </div>
                         <div>
                             <label for="zip">Zip</label>
-                            <input type="number" name="zip" required= "true">
+                            <input type="number" name="zip" required="true">
                         </div>
                     </div>
                     <h1>
                         <i class="far fa-credit-card"></i> Payment Information
                     </h1>
                     <div class="checkcc-num">
+                        <label for="cardnum">Credit Card Class</label>
+                        <select name="cardclass">
+                            <option>Paypal</option>
+                            <option>Visa</option>
+                            <option>MasterCard</option>
+                            <option>American Express</option>
+                        </select>
+                    </div>
+                    <div class="checkcc-num">
                         <label for="cardnum">Credit Card No.</label>
-                        <input type="number" name="cardnum" required= "true">
+                        <input type="number" name="cardnum" required="true">
                     </div>
                     <div class="checkcc-info">
                         <div>
                             <label for="cardnum">Exp</label>
-                            <input type="number" name="expire" required= "true">
+                            <input type="number" name="expire" required="true">
                         </div>
                         <div>
                             <label for="cardnum">CCV</label>
-                            <input type="number" name="security" required= "true">
+                            <input type="number" name="security" required="true">
                         </div>
+
                     </div>
                     <div class="checkbtns">
                         <button>Send</button>

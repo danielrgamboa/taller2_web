@@ -1485,10 +1485,6 @@ body, html {
   margin-top: 15px;
 }
 
-.error__container {
-  background-color: #f7b4ed;
-}
-
 .error__img {
   margin-top: 20px;
   max-width: 960px;
@@ -1537,6 +1533,10 @@ body, html {
           justify-content: center;
   width: 100%;
   margin-bottom: 50px;
+}
+
+.checkouterror {
+  color: #900c3f;
 }
 
 .checkwrapper {
@@ -1779,6 +1779,27 @@ button:focus {
   input {
     margin: 5px 0;
     min-height: 30px;
+  }
+}
+
+.confirmation__img {
+  margin-top: 20px;
+  max-width: 960px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 5px;
+}
+
+@media (max-width: 960px) {
+  .confirmation__img {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100%;
+    height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

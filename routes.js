@@ -157,7 +157,7 @@ function configureRoutes(app, db) {
         collection.find(filter).toArray(function (err, docs) {
             assert.equal(err, null);
 
-            
+
             //Datos importantes dentro de los productos
             //Recorrer productos para agregar freeShipping (>$150)
             docs.forEach(function (elem) {
@@ -201,24 +201,39 @@ function configureRoutes(app, db) {
 
     //Abrir la página de checkout de la página-tipo GET
     app.get('/checkout', function (req, res) {
+
+        //Error cuando sucede algo que impide mandar info al servidor
+        console.log(req.query.error);
         console.log('hola en checkout');
         //res.send('pagina de checkout');
 
         //objeto contexto 
-        var context = {};
+        var context = {
+            showError: req.query.error,
+        };
         res.render('checkout', context);
     });
 
     //Recibir información de la página de checkout-tipo POST
     app.post('/checkout', function (req, res) {
-        
         console.log(req.body);
+
+        var { fname, lname, country, address, city, state, zip, cardnum, expire, security, cardclass } = req.body;
 
         req.body.creation_date = new Date();
 
+        if (!fname || !lname || !country || !address || !city || !state || !zip || !cardnum
+            || !expire || !security || !cardclass) {
+
+            //res.send('error');
+            res.redirect('/checkout?error=true');
+            return;
+        }
+
         const collection = db.collection('orders');
         collection.insertOne(req.body);
-        res.send('test');
+        //res.send('test');
+        res.redirect('/confirmation');
     });
 
     //Abrir página de error 404 (element not found)
@@ -228,6 +243,15 @@ function configureRoutes(app, db) {
         //objeto contexto 
         var context = {};
         res.render('404', context);
+    });
+
+    //Abrir página de confirmacion de compra final
+    app.get('/confirmation', function (req, res) {
+        console.log('hola en confirmacion');
+
+        //objeto contexto 
+        var context = {};
+        res.render('confirmation', context);
     });
 
 
