@@ -83,10 +83,10 @@ function configureRoutes(app, db) {
             sortings.price = 1;
         }
         if (req.query.sort == 'name_asce') {
-            sortings.name = 1;
+            sortings.title = 1;
         }
         if (req.query.sort == 'name_desc') {
-            sortings.name = -1;
+            sortings.title = -1;
         }
 
 
@@ -105,19 +105,13 @@ function configureRoutes(app, db) {
                 } else {
                     elem.freeShipping = false;
                 }
-            });
 
-            //Recorrer productos para agregar kardashianAproved (>$100)
-            docs.forEach(function (elem) {
                 if (elem.price >= 100) {
                     elem.kardashianAproved = true;
                 } else {
                     elem.kardashianAproved = false;
                 }
-            });
 
-            //Recorrer productos para agregar topSeller (>3.5)
-            docs.forEach(function (elem) {
                 if (elem.rating >= 4.3) {
                     elem.topSeller = true;
                 } else {
@@ -147,6 +141,7 @@ function configureRoutes(app, db) {
     app.get('/product/:name/:id', function (req, res) {
         if (req.params.id.length != 24) {
             res.redirect('/404');
+            return;
         }
 
         const filter = {
@@ -162,10 +157,34 @@ function configureRoutes(app, db) {
         collection.find(filter).toArray(function (err, docs) {
             assert.equal(err, null);
 
+            
+            //Datos importantes dentro de los productos
+            //Recorrer productos para agregar freeShipping (>$150)
+            docs.forEach(function (elem) {
+                if (elem.price >= 150) {
+                    elem.freeShipping = true;
+                    console.log(elem);
+                } else {
+                    elem.freeShipping = false;
+                }
+
+                if (elem.price >= 100) {
+                    elem.kardashianAproved = true;
+                } else {
+                    elem.kardashianAproved = false;
+                }
+
+                if (elem.rating >= 4.3) {
+                    elem.topSeller = true;
+                } else {
+                    elem.topSeller = false;
+                }
+            });
 
             //Redireccionar al usuario a página de 404 cuando el producto no se encuentra
             if (docs.length == 0) {
                 res.redirect('/404');
+                return;
             }
 
 
@@ -192,8 +211,14 @@ function configureRoutes(app, db) {
 
     //Recibir información de la página de checkout-tipo POST
     app.post('/checkout', function (req, res) {
-        res.send('test');
+        
         console.log(req.body);
+
+        req.body.creation_date = new Date();
+
+        const collection = db.collection('orders');
+        collection.insertOne(req.body);
+        res.send('test');
     });
 
     //Abrir página de error 404 (element not found)

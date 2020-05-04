@@ -1,12 +1,17 @@
 .product__description{
-    background-color: orchid;
+    //background-color: orchid;
     font-size: 20px;
     width: 100%;
     display: flex;
+
+    @media (max-width: $breakpoint-sm){
+       padding: 10px;
+    
+    } 
 }
 
 .product__section{
-    background-color: lightsteelblue;
+    //background-color: lightsteelblue;
     display: flex;
     flex-direction: row;
 
@@ -14,14 +19,15 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            background-color: midnightblue;
+            //background-color: midnightblue;
             width: 100%;
+            align-items: center;
   
         }
       }
 
 .product__gallery{
-    background-color: lime;
+    //background-color: lime;
     width: 50%;
     margin-right: 30px;
     @media (max-width: $breakpoint-sm) {
@@ -29,7 +35,7 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
-        background-color: mistyrose;
+        //background-color: mistyrose;
 
 }
 }
@@ -59,14 +65,20 @@
     display: flex;
     flex-direction: column;
     margin: 0px auto;
-    background-color: mistyrose;
+    //background-color: mistyrose;
+
+    @media (max-width: $breakpoint-sm){
+        width: 85%;
+        margin: 0px;
+        margin-top: 20px;
+    }
 }
 
 .product-bot{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: olive;
+    //background-color: olive;
 }
 
 
@@ -74,12 +86,21 @@
 width: 50%;
 margin-left: 50px;
 margin-top: 35px;
+
+@media (max-width: $breakpoint-sm){
+    width: 85%;
+    margin-left: 0px;
+    margin-right: 0px;
+
+} 
 }
 .product__gallerymain{
     height: 400px;
     width: 100%;
     object-fit: cover;
-    object-position: center;  
+    object-position: center; 
+
+
 }
 .product__gallerythumbs{
     display: flex;
@@ -93,7 +114,7 @@ margin-top: 35px;
 }
 
 .producti{
-    background-color: mediumaquamarine;
+    //background-color: mediumaquamarine;
     max-width: 960px;
     margin: 0px auto;
     display: flex;
@@ -119,9 +140,9 @@ margin-top: 35px;
 }
 
 .product__return{
-    background-color: orange;
+    //background-color: orange;
     display: flex;
-    outline: none;
+    text-decoration: none;
 }
 
 

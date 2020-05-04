@@ -1,23 +1,21 @@
-.holis{
-    background-color: hotpink;
-}
+
 .shopall{
     display: flex;
     flex-direction: row;
-    background-color: lightskyblue;
+    //background-color: lightskyblue;
 
         @media(max-width: 960px){
         &{
             flex-direction: column;
             max-width: 100%;
             height: auto;
-            background-color: orangered;
+            //background-color: orangered;
         }
       }
     
 }
 .shopaside{
-    background-color: #d9d3da;
+    background-color: #fbdff0;
     width: 350px;
     padding: 0px 40px;
    
@@ -31,7 +29,7 @@
         &{
             flex-direction: column;
             padding: 30px 10px;
-            background-color: mediumturquoise;
+            //background-color: mediumturquoise;
 
   
         }
@@ -40,16 +38,20 @@
 }
 
 .shopaside__filter:hover{
-    background-color: $secondary-color;
+    color: $primary-color;
 }
-.shopaside__filter:nth-child(1){
-    margin-left: -10px;
-    width: 100%;
+.shopaside__titlestyle:hover{
+    color: $primary-color;
 }
-
+.shopaside__titlerating:hover{
+    color: $primary-color;
+}
+.shopaside__titlekarda:hover{
+    color: $primary-color;
+}
 
 .shop{
-    background-color: yellow;
+    //background-color: yellow;
     max-width: 960px;
     margin: 0px auto;
     display: flex;
@@ -57,28 +59,30 @@
     padding: 0px 5px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
 }
 .shop__header{
-    background-color: mediumseagreen;
+    //background-color: mediumseagreen;
     display: flex;
     margin-top: 30px;
     flex-direction: column;
     margin-left: 20px;
+
 
 }
 .productList{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: greenyellow;
+    //background-color: greenyellow;
     @media(max-width: $breakpoint-sm){
         &{
             flex-wrap: wrap;
             align-items: center;
             flex-direction: column;
-            padding: 30px 10px;
-            background-color: purple;
+            padding: 30px 25px;
+            //background-color: purple;
   
         }
       }
@@ -99,24 +103,25 @@
     }
     &__title{
         padding: 0px 10px 0px 10px;
+        
     }
     &__minidescription{
-        background-color: yellow;
+        background-color: #ffb031;
         padding: 0px 10px 0px 10px;
     }
     &__info{
         display: flex;
         justify-content: space-between;
-        background-color: lightseagreen;
+        background-color: #ffb2a7;
         padding: 0px 10px 0px 10px;
     }
     &__link{
-        background-color: mediumblue;
+        //background-color: mediumblue;
         display: flex;
         justify-content: center;
     }
     &__star{
-        background-color: pink;
+        //background-color: pink;
         color: white;
         display: flex;
         margin-top: 21px;
@@ -138,7 +143,7 @@
         }
     }
     &__button:hover{
-        background-color: goldenrod;
+        background-color: #7f78d2;
     }
     @media (max-width: $breakpoint-sm){
         margin-top: 20px;
@@ -173,6 +178,14 @@
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
+
+
+    @media(max-width: $breakpoint-sm){
+        &{
+          width: 90%;
+  
+        }
+      }
    }
    .select-css::-ms-expand {
     display: none;

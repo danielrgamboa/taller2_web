@@ -3,6 +3,7 @@
     width: 300px;
     display: flex;
     margin-left: auto;
+    align-items: center;
 
     &__input{
         $font-family: Quicksand;      
@@ -107,7 +108,7 @@
     color: white;
     display: flex;
     margin-left: 20px;
-    margin-top: 6px;
+    margin-top: 25px;
     height: 100%;
     width: 20%;
     text-decoration: none;
