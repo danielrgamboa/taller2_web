@@ -1024,6 +1024,18 @@ body, html {
   }
 }
 
+.product__title {
+  color: #c634b8;
+}
+
+.product__kk {
+  color: #6886c5;
+}
+
+.product__price {
+  color: #639a67;
+}
+
 .product__section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1125,9 +1137,6 @@ body, html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .product__gallery {
@@ -1208,10 +1217,8 @@ body, html {
   margin-right: 13px;
 }
 
-.product__return {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.product__return a {
+  color: #34495E;
   text-decoration: none;
 }
 
@@ -1488,7 +1495,7 @@ body, html {
 .error__img {
   margin-top: 20px;
   max-width: 960px;
-  margin: 0px auto;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1782,10 +1789,37 @@ button:focus {
   }
 }
 
+input::-webkit-input-placeholder {
+  color: #900c3f;
+  font-size: 0.6em;
+  font-family: "Quicksand";
+  padding: 10px;
+}
+
+input:-ms-input-placeholder {
+  color: #900c3f;
+  font-size: 0.6em;
+  font-family: "Quicksand";
+  padding: 10px;
+}
+
+input::-ms-input-placeholder {
+  color: #900c3f;
+  font-size: 0.6em;
+  font-family: "Quicksand";
+  padding: 10px;
+}
+
+input::placeholder {
+  color: #900c3f;
+  font-size: 0.6em;
+  font-family: "Quicksand";
+  padding: 10px;
+}
+
 .confirmation__img {
-  margin-top: 20px;
   max-width: 960px;
-  margin: 0px auto;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

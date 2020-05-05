@@ -10,6 +10,7 @@ $title: $secondary-color;
     padding: 0px 5px;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .checkout-left{
@@ -77,6 +78,7 @@ form {
         margin-top: 5px;
         color: $maroon;
         border-radius: 4px;
+        
     }
 
     label {
@@ -102,6 +104,7 @@ form {
     justify-content: space-between;
     display: flex;
     width: 100%;
+    
 
     div {
         width: 45%;
@@ -210,3 +213,9 @@ button:focus {
         min-height: 30px;
     }
 }
+input::placeholder {
+    color: #900c3f;
+    font-size: 0.6em;
+    font-family: "Quicksand";
+    padding: 10px;
+  }

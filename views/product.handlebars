@@ -19,7 +19,7 @@
         <!--Información del producto individual -->
         <div class="product__info">
             <h2 class="product__title">{{ title }}</h2>
-            <h3>${{ price }}</h3>
+            <h3 class="product__price">${{ price }}</h3>
             <!--cuando el producto tiene opciones disponibles (larga, corta, lisa, rizada) -->
             {{# if options}}
             <h3>This wig has these customable styles:</h3>
@@ -38,7 +38,7 @@
             <h3>You can customize the wig</h3>
             <ol>
                 {{#each variations}}
-                <li>{{ name }} $:<strong>{{ price }}</strong></li>
+                <span class="product__customize"><li>{{ name }} $:<strong></span>{{ price }}</strong></li>
                 {{/each}}
             </ol>
             {{/if}}
@@ -50,7 +50,7 @@
 
             <!--cuando la peluca es Kardashian Kollection (>$100) -->
             {{#if kardashianAproved}}
-            <h3>This wig is Kardashian Kollection Aproved</h3>
+            <h3 class="product__kk">This wig is Kardashian Kollection Aproved</h3>
             {{/if}}
 
             <!--cuando la peluca es topSeller (>3.5) -->

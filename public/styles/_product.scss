@@ -10,6 +10,19 @@
     } 
 }
 
+.product__title{
+    color: $primary-color;
+}
+
+.product__kk{
+    color: #6886c5;
+}
+
+.product__price{
+    color: #639a67;
+}
+
+
 .product__section{
     //background-color: lightsteelblue;
     display: flex;
@@ -77,7 +90,7 @@
 .product-bot{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    //justify-content: center;
     //background-color: olive;
 }
 
@@ -139,9 +152,8 @@ margin-top: 35px;
     margin-right: 13px;
 }
 
-.product__return{
-    //background-color: orange;
-    display: flex;
+.product__return a{
+    color: $secondary-color;
     text-decoration: none;
 }
 
