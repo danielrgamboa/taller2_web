@@ -38,7 +38,9 @@
             <h3>You can customize the wig</h3>
             <ol>
                 {{#each variations}}
-                <span class="product__customize"><li>{{ name }} $:<strong></span>{{ price }}</strong></li>
+                <span class="product__customize">
+                    <li>{{ name }} $:<strong>
+                </span>{{ price }}</strong></li>
                 {{/each}}
             </ol>
             {{/if}}
@@ -60,7 +62,12 @@
             <p class="product__description">{{ description }}</p>
 
             <span class="product-bot">
-            <a href="/checkout" target="_self" class="prod-btn"><i class="fas fa-heart"></i>Add to cart</a>
+                <button class="prod-btn" 
+                data-id="{{ _id }}"
+                data-img="{{ img }}"
+                data-name="{{ title }}"
+                data-price="{{ price }}">
+                <span class="prod-btnicon"><i class="fas fa-cart-plus"></i></span></i>Add to cart</button>
             </span>
         </div>
     </section>

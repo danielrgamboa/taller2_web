@@ -51,7 +51,7 @@
 }
 
 .shop{
-    //background-color: yellow;
+    background-color: yellow;
     max-width: 960px;
     margin: 0px auto;
     display: flex;
@@ -118,7 +118,11 @@
     &__link{
         //background-color: mediumblue;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 30px;
+
     }
     &__star{
         //background-color: pink;
@@ -127,10 +131,18 @@
         margin-top: 21px;
         margin-left: -13px;
     }
+    &__buttonicon{
+        color: white;
+        margin-right: 10px;
+    }
     &__button{
-        display: inline-block;
+        height: 50%;
+        width: auto;
+        display: flex;
         background-color: $secondary-color;
-        border-radius: 6px;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
         font-size: 16px;
         color: #FFFFFF;
         text-decoration: none;
@@ -207,3 +219,4 @@
        display: flex;
        margin-top: 15px;
    }
+

@@ -278,6 +278,13 @@ body, html {
   outline: none;
 }
 
+.cart__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px 50px;
+}
+
 .search__carrito {
   color: white;
   display: -webkit-box;
@@ -1086,10 +1093,17 @@ body, html {
 }
 
 .prod-btn {
-  width: 40%;
-  display: inline-block;
-  background-color: #c634b8;
-  border-radius: 6px;
+  height: 50%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #34495E;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
   color: #FFFFFF;
   text-decoration: none;
@@ -1129,6 +1143,10 @@ body, html {
     margin: 0px;
     margin-top: 20px;
   }
+}
+
+.prod-btnicon {
+  margin-right: 10px;
 }
 
 .product-bot {
@@ -1282,6 +1300,7 @@ body, html {
 }
 
 .shop {
+  background-color: yellow;
   max-width: 960px;
   margin: 0px auto;
   display: -webkit-box;
@@ -1383,9 +1402,17 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 30px;
 }
 
 .thumb__star {
@@ -1397,10 +1424,23 @@ body, html {
   margin-left: -13px;
 }
 
+.thumb__buttonicon {
+  color: white;
+  margin-right: 10px;
+}
+
 .thumb__button {
-  display: inline-block;
+  height: 50%;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #34495E;
-  border-radius: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
   color: #FFFFFF;
   text-decoration: none;
