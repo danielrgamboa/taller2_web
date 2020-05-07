@@ -4,7 +4,7 @@
 
         <h2 class="shopaside__filter">Filters</h2>
         <h3 class="shopaside__titlestyle">Style</h3>
-        <ul>
+        <ul class="shopaside__ul">
             <a class="shopaside__link" href="?style=Blair">
                 <li>Blair</li>
             </a>
@@ -24,7 +24,7 @@
         </ul>
 
         <h3 class="shopaside__titlerating">Rating</h3>
-        <ul>
+        <ul class="shopaside__ul">
             <a class="shopaside__link" href="?rating_gte=2.5&rating_lte=3.5">
                 <li>2.5 - 3.5</li>
             </a>
@@ -34,12 +34,12 @@
             <a class="shopaside__link" href="?rating_gte=4.5&rating_lte=5.0">
                 <li>4.5 - 5.0</li>
             </a>
-        </ul>
+        </ul class="shopaside__ul">
 
-        <h3 class="shopaside__titlekarda">Kardashian Approved</h3>
-        <ul>
+        <h3 class="shopaside__titlekarda">Collections</h3>
+        <ul class="shopaside__ul">
             <a class="shopaside__link" href="?priceKardashian=100">
-                <li>Kardashian Kollection</li>
+                <li>Kardashianz</li>
             </a>
         </ul>
 
@@ -82,7 +82,7 @@
                     </div>
                     <div class="thumb__link">
                         <!--Dar click en el boton del store para pasar al product individual-->
-                        <a href="/product/{{title}}/{{ _id }}" class="thumb__button"><span class="thumb__buttonicon"><i class="fas fa-search-plus"></i></span></i></a>
+                        <a href="/product/{{title}}/{{ _id }}" class="thumb__button"><span class="thumb__buttonicon"><i class="fas fa-search-plus"></i></span>View</i></a>
 
 
                         <button class="prod-btn" 
@@ -90,7 +90,7 @@
                         data-img="{{ img }}" 
                         data-name="{{ title }}"
                         data-price="{{ price }}">
-                        <span class="prod-btnicon"><i class="fas fa-cart-plus"></i></span></i></button>
+                        <span class="prod-btnicon"><i class="fas fa-cart-plus"></i></span>Add</i></button>
 
                     </div>
                 </div>

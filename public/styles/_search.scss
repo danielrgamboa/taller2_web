@@ -105,14 +105,23 @@
     
   }
 
-  .cart__btn{
+  /*.search__cart{
+    background-color: orange;
     display: flex;
-    border-radius: 30px 50px;
+    justify-content: space-between;
   }
+  .cart__btn{
+    position: absolute;
+    padding: 5px 9px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+  }*/
 
   .search__carrito{
     color: white;
     display: flex;
+    position: relative;
     margin-left: 20px;
     margin-top: 25px;
     height: 100%;
@@ -137,4 +146,9 @@
         height: auto;
         
     }
+  }
+
+  .fa-customize{
+    font-size: 30px;
+    position: relative;
   }

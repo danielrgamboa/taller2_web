@@ -9,15 +9,15 @@
             flex-direction: column;
             max-width: 100%;
             height: auto;
-            //background-color: orangered;
         }
-      }
-    
+      }    
 }
 .shopaside{
-    background-color: #fbdff0;
+    //background-color: #fbdff0;
     width: 350px;
     padding: 0px 40px;
+    background: rgb(246,195,229);
+    background: linear-gradient(0deg, rgba(246,195,229,1) 5%, rgba(251,223,240,1) 60%);
    
 
     &__link{
@@ -30,6 +30,7 @@
             flex-direction: column;
             padding: 30px 10px;
             //background-color: mediumturquoise;
+            width: 100%;
 
   
         }
@@ -49,11 +50,18 @@
 .shopaside__titlekarda:hover{
     color: $primary-color;
 }
+.shopaside__ul{
+    line-height: 2;
+    @media(max-width: $breakpoint-sm){
+        line-height: 1.7;
+    }
+}
 
 .shop{
-    background-color: yellow;
+    //background-color: yellow;
     max-width: 960px;
     margin: 0px auto;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     padding: 0px 5px;
@@ -121,7 +129,7 @@
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        padding: 10px 30px;
+        padding: 10px 20px;
 
     }
     &__star{
@@ -136,11 +144,11 @@
         margin-right: 10px;
     }
     &__button{
-        height: 50%;
-        width: auto;
+        height: 40%;
+        width: 40%;
         display: flex;
-        background-color: $secondary-color;
-        align-items: center;
+        background-color: #790c5a;
+        justify-content: center;
         border: none;
         border-radius: 10px;
         font-size: 16px;
@@ -148,14 +156,13 @@
         text-decoration: none;
         padding: 12px 30px;
         transition: all .5s;
-    
         @media (max-width: $breakpoint-sm){
             display: flex;
             background-color: #ffb031 ;
         }
     }
     &__button:hover{
-        background-color: #7f78d2;
+        background-color: #310793;
     }
     @media (max-width: $breakpoint-sm){
         margin-top: 20px;
@@ -163,6 +170,7 @@
         height: auto;
         margin: 0px;
         margin-bottom: 50px;
+        
       }
 }
 
