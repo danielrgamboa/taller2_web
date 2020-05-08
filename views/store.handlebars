@@ -41,6 +41,9 @@
             <a class="shopaside__link" href="?priceKardashian=100">
                 <li>Kardashianz</li>
             </a>
+            <a class="shopaside__link" href="?optionsDivergent=options">
+                <li>Divergent</li>
+            </a>
         </ul>
 
     </article>
@@ -82,15 +85,13 @@
                     </div>
                     <div class="thumb__link">
                         <!--Dar click en el boton del store para pasar al product individual-->
-                        <a href="/product/{{title}}/{{ _id }}" class="thumb__button"><span class="thumb__buttonicon"><i class="fas fa-search-plus"></i></span>View</i></a>
+                        <a href="/product/{{title}}/{{ _id }}" class="thumb__button"><span class="thumb__buttonicon"><i
+                                    class="fas fa-search-plus"></i></span>View</i></a>
 
 
-                        <button class="prod-btn" 
-                        data-id="{{ _id }}" 
-                        data-img="{{ img }}" 
-                        data-name="{{ title }}"
-                        data-price="{{ price }}">
-                        <span class="prod-btnicon"><i class="fas fa-cart-plus"></i></span>Add</i></button>
+                        <button class="prod-btn" data-id="{{ _id }}" data-img="{{ img }}" data-name="{{ title }}"
+                            data-price="{{ price }}">
+                            <span class="prod-btnicon"><i class="fas fa-cart-plus"></i></span>Add</i></button>
 
                     </div>
                 </div>

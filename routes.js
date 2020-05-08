@@ -60,6 +60,14 @@ function configureRoutes(app, db) {
             }
         }
 
+        //Buscar productos filtrados por Opciones
+        if (req.query. optionsDivergent) {
+            //crear  arreglo filtrado
+            filters.options = {
+                $in: [req.query.optionsDivergent,'Long,', 'Short,', 'Wavy']
+            }
+        }
+
         //Buscar productos filtrados por busqueda
         if (req.query.search) {
             filters.$and.push({
