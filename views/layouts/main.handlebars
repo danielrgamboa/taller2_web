@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDWigs</title>
-    <link rel="shortcut icon" href="/img/favicon.ico"> 
-    <link rel="stylesheet" href="/styles/main.css">
-     <link href="/libraries/fontawesome/css/all.css" rel="stylesheet"> 
-    <link href="/libraries/fontawesome/webfonts/fa-brands-400.eot" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDWigs</title>
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href="/libraries/fontawesome/css/all.css" rel="stylesheet">
+  <link href="/libraries/fontawesome/webfonts/fa-brands-400.eot" rel="stylesheet">
 </head>
+
 <body>
 
-      <!--Sección: Header principal-->
+  <!--Sección: Header principal-->
   <section>
     <header class="mainheader">
       <div class="container mainheader__container">
         <a href="#">
           <img class="mainheader__logo" src="/img/logoddwigs.png" alt="logo ddwigs">
         </a>
-        
+
 
         <!--Buscador-->
         <div class="search">
-          
+
           <input type="text" placeholder="Search Some Wigs..." class="search__input">
           <button class="search__button">
             <img class="search__logo" src="/img/Recurso 4.png" alt="lupa">
           </button>
 
           <div class="search__cart">
-          <a href="/checkout" target="_self" class="search__carrito"><i class="fas fa-shopping-cart fa-customize"></i></a>
-          <button class="cart__btn">
-            0
-          </button>
-          <div class="cart__list"></div>
+            <a href="/cart" target="_self" class="search__carrito"><i class="fas fa-shopping-cart fa-customize"></i></a>
+            <button class="cart__btn">
+             <p>0</p>
+            </button>
           </div>
+        </div>
 
 
-          <!--Navegador-->  
-        </header>
-        <nav class="mainnav">
-          
-          
-          <!--Responsive del navegador-->
-          <button class="hamburguerbtn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          
-          <div class="container mainnav__container">
-            <a href="/" class="mainnav__link">Home</a>
-            <a href="#" class="mainnav__link">About</a>
-            <a href="#" class="mainnav__link">Categories</a>
-            <a href="#" class="mainnav__link">Models</a>
-            <a href="/shop" class="mainnav__link">Shop</a>
-            <a href="#" class="mainnav__link">Contact</a>
-          </div>
-        </nav>
-      </section>
+          <!--Navegador-->
+    </header>
+    <nav class="mainnav">
 
 
-    {{{ body }}}
+      <!--Responsive del navegador-->
+      <button class="hamburguerbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-          <!--Sección: Footer oficial-->
-      <section>
-        <article class="mainfooter">
-          <div class="mainfooter__container">
-            <h2>DDWigs ® </h2>
-            <img class="mainfooter__image" src="/img/paypal.png" alt="paypal logo">
-          </div>
-        </article>
-      </section>
-      <script src="/scripts/main.js"></script> 
-      <script src="/scripts/cart.js"></script> 
+      <div class="container mainnav__container">
+        <a href="/" class="mainnav__link">Home</a>
+        <a href="#" class="mainnav__link">About</a>
+        <a href="#" class="mainnav__link">Categories</a>
+        <a href="#" class="mainnav__link">Models</a>
+        <a href="/shop" class="mainnav__link">Shop</a>
+        <a href="#" class="mainnav__link">Contact</a>
+      </div>
+    </nav>
+  </section>
+
+
+  {{{ body }}}
+
+  <!--Sección: Footer oficial-->
+  <section>
+    <article class="mainfooter">
+      <div class="mainfooter__container">
+        <h2>DDWigs ® </h2>
+        <img class="mainfooter__image" src="/img/paypal.png" alt="paypal logo">
+      </div>
+    </article>
+  </section>
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/cart.js"></script>
 </body>
+
 </html>

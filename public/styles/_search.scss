@@ -52,6 +52,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width: $breakpoint-sm){
       margin-right: 50px;
@@ -89,6 +91,7 @@
   
   .search__input::placeholder {
     color: lightgray;
+    font-size: 1em;
   }
   
   .search__button {
@@ -105,25 +108,30 @@
     
   }
 
-  /*.search__cart{
-    background-color: orange;
+  .search__cart{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    & button{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color:  rgb(246,195,229);
+      z-index: 2;
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+      margin-left: 5px;
+      font-weight: 600;
+      margin-top: -25px;
+      
+    }
   }
-  .cart__btn{
-    position: absolute;
-    padding: 5px 9px;
-    border-radius: 50%;
-    background: white;
-    color: black;
-  }*/
 
   .search__carrito{
     color: white;
     display: flex;
     position: relative;
     margin-left: 20px;
-    margin-top: 25px;
     height: 100%;
     width: 20%;
     text-decoration: none;

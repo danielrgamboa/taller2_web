@@ -69,7 +69,7 @@
 
     @media (max-width: $breakpoint-sm){
         display: flex;
-        background-color: #ffb031 ;
+        background-color: $secondary-color ;
     }
   }
   .prod-btn:hover {

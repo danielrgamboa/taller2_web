@@ -61,10 +61,10 @@ function configureRoutes(app, db) {
         }
 
         //Buscar productos filtrados por Opciones
-        if (req.query. optionsDivergent) {
+        if (req.query.optionsDivergent) {
             //crear  arreglo filtrado
             filters.options = {
-                $in: [req.query.optionsDivergent,'Long,', 'Short,', 'Wavy']
+                $in: [req.query.optionsDivergent, 'Long,', 'Short,', 'Wavy']
             }
         }
 
@@ -260,6 +260,15 @@ function configureRoutes(app, db) {
         //objeto contexto 
         var context = {};
         res.render('confirmation', context);
+    });
+
+    //Abrir página del Cart
+    app.get('/cart', function (req, res) {
+        console.log('hola en cart');
+
+        //objeto contexto 
+        var context = {};
+        res.render('cart', context);
     });
 
 
