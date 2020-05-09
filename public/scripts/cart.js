@@ -17,7 +17,7 @@ function onLoad() {
     console.log(cartList.length);
     cartBtn.innerText = cartList.length;
 
-    
+
     function renderCart() {
 
         var total = 0;
@@ -30,10 +30,14 @@ function onLoad() {
             newItem.classList.add('cart__item');
             newItem.innerHTML = `
         <div class ="cartinfo">
+        <span class ="cartinfoname">
+        <span class ="cartinfostart">
         <p class="name__cart">` + obj.name + `</p>
-        <img class="img__cart" src="${obj.img}" />
-        <small class="price__cart">${ obj.price}</small>
+        <p>$</p><p class="price__cart">${ obj.price}</p>
+        </span>
         <button class="btn__cart"><i class="fas fa-trash-alt"></i></button>
+        </span>
+        <img class="img__cart" src="${obj.img}" />
         </div>
       `;
             var btntrash = newItem.querySelector('.btn__cart');
@@ -52,7 +56,7 @@ function onLoad() {
         totalElem.innerText = total;
     }
 
-    
+
     cartBtn.addEventListener('click', renderCart);
     //renderizar los productos en la ruta /cart
     //renderCart();
@@ -66,7 +70,8 @@ function onLoad() {
             var price = elem.getAttribute('data-price');
             var id = elem.getAttribute('data-id');
             var img = elem.getAttribute('data-img');
-            console.log(name, price, id, img);
+            var mini = elem.getAttribute('data-minidescription');
+            console.log(name, price, id, img, mini);
 
 
             cartList.push({
@@ -74,6 +79,7 @@ function onLoad() {
                 img: img,
                 name: name,
                 price: parseInt(price),
+                mini: minidescription,
             });
 
             cartBtn.innerText = cartList.length;
@@ -84,7 +90,8 @@ function onLoad() {
         });
 
     });
-    renderShop.onClick=renderCart();
+    renderShop.onClick = renderCart();
+    //renderShop.onClick=cartContainer();
 }
 
 window.addEventListener('load', onLoad);

@@ -4,7 +4,7 @@
 
         <div class="checkwrapper">
             <div class="checkcontainer">
-                <form action="/checkout" method="POST">
+                <form class="checkoutform" action="/checkout" method="POST">
                     <h1>
                         <i class="fas fa-shipping-fast"></i>
                         Shipping Details
@@ -76,6 +76,9 @@
                         </div>
 
                     </div>
+
+                    <input name="products" type="hidden" class="checkoutform__products">
+
                     <div class="checkbtns">
                         <button>Send</button>
                     </div>
@@ -83,3 +86,4 @@
             </div>
         </div>
 </article>
+<script src="/scripts/checkout.js"></script>

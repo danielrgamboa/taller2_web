@@ -226,17 +226,19 @@ function configureRoutes(app, db) {
     app.post('/checkout', function (req, res) {
         console.log(req.body);
 
-        var { fname, lname, country, address, city, state, zip, cardnum, expire, security, cardclass } = req.body;
+        var { fname, lname, country, address, city, state, zip, cardnum, expire, security, cardclass, products } = req.body;
 
         req.body.creation_date = new Date();
 
         if (!fname || !lname || !country || !address || !city || !state || !zip || !cardnum
-            || !expire || !security || !cardclass) {
+            || !expire || !security || !cardclass || !products) {
 
             //res.send('error');
             res.redirect('/checkout?error=true');
             return;
         }
+
+        req.body.products = JSON.parse(req.body.products);
 
         const collection = db.collection('orders');
         collection.insertOne(req.body);
