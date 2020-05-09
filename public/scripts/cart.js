@@ -38,6 +38,7 @@ function onLoad() {
         <button class="btn__cart"><i class="fas fa-trash-alt"></i></button>
         </span>
         <img class="img__cart" src="${obj.img}" />
+        <p class="mini__cart"> ${ obj.mini }</p>
         </div>
       `;
             var btntrash = newItem.querySelector('.btn__cart');
@@ -70,7 +71,7 @@ function onLoad() {
             var price = elem.getAttribute('data-price');
             var id = elem.getAttribute('data-id');
             var img = elem.getAttribute('data-img');
-            var mini = elem.getAttribute('data-minidescription');
+            var mini = elem.getAttribute('data-mini');
             console.log(name, price, id, img, mini);
 
 
@@ -79,7 +80,7 @@ function onLoad() {
                 img: img,
                 name: name,
                 price: parseInt(price),
-                mini: minidescription,
+                mini: mini,
             });
 
             cartBtn.innerText = cartList.length;

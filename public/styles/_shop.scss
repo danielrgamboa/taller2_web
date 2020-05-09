@@ -68,7 +68,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    animation: slideUp 1200ms ease;
+}
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
 
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+
+    }
 }
 .shop__header{
     //background-color: mediumseagreen;
