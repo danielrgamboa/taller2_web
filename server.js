@@ -36,22 +36,6 @@ const dbName = 'DDWigs';
 // Create a new MongoClient
 const client = new MongoClient(url);
 
-//Connect to Data Base
-MongoClient.connect('mongodb+srv://@cluster0-srpy8.mongodb.net/tienda'),
-{
-    auth: {
-        user: 'danielrgamboa',
-        password: 'chicago2017!'
-    }
-},
-function (err, client){
-    if (err) throw err;
-
-    db= client.db('tienda');
-
-    app.listen(process.env.PORT || 1234);
-}
-
 // Use connect method to connect to the Server
 client.connect(function (err) {
     assert.equal(null, err);
@@ -71,3 +55,19 @@ app.use(express.static('public'));
 app.listen(3000, function () {
     console.log('servidor iniciado en puerto 3000');
 });
+
+//Connect to Data Base
+MongoClient.connect('mongodb+srv://@cluster0-srpy8.mongodb.net/tienda'),
+{
+    auth: {
+        user: 'danielrgamboa',
+        password: 'chicago2017!'
+    }
+},
+function (err, client){
+    if (err) throw err;
+
+    db= client.db('tienda');
+
+    app.listen(process.env.PORT ||1234);
+}
