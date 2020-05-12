@@ -2,22 +2,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
-/*/Connect to Data Base
-MongoClient.connect('mongodb+srv://@cluster0-srpy8.mongodb.net/tienda'),
-{
-    auth: {
-        user: 'danielrgamboa',
-        password: 'chicago2017!',
-    }
-},
-function (err, client){
-    if (err) throw err;
-
-    db= client.db('tienda');
-
-    app.listen(process.env.PORT ||1234);
-}*/
-
 //Importar path para hacer la página absoluta
 const path = require('path');
 
@@ -44,13 +28,18 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://@cluster0-srpy8.mongodb.net';
 
 // Database Name›
-const dbName = 'DDWigs';
+const dbName = 'tienda';
 
 // Create a new MongoClient
-const client = new MongoClient(url);
+const client = new MongoClient(url, {
+    auth: {
+        user: 'danielrgamboa',
+        password: 'chicago2017',
+    }
+} );
 
 // Use connect method to connect to the Server
 client.connect(function (err) {
@@ -60,16 +49,15 @@ client.connect(function (err) {
     const db = client.db(dbName);
 
     configureRoutes(app, db);
+    app.listen(process.env.PORT ||1234);
 });
 
-//El puerto en donde aparece la página.
+/*/El puerto en donde aparece la página.
 app.listen(3000, function () {
     console.log('servidor iniciado en puerto 3000');
-});
+});*/
 
 //Hacer estática la carpeta Public para que se muestren los styles.
 app.use(express.static('public'));
-
-
 
 

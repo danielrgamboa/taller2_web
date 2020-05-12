@@ -24,6 +24,9 @@ function onLoad() {
 
         console.log('hey');
         var cartContainer = document.querySelector('.cart__list');
+        if(! cartContainer){
+            return;
+        }
         cartContainer.innerHTML = '';
         cartList.forEach(function (obj, index) {
             var newItem = document.createElement('div');
